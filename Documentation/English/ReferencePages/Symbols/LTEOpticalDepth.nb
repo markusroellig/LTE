@@ -1,0 +1,1230 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42868,       1220]
+NotebookOptionsPosition[     36691,       1029]
+NotebookOutlinePosition[     39486,       1104]
+CellTagsIndexPosition[     39364,       1098]
+WindowTitle->LTEOpticalDepth
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"populationRatio\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/populationRatio"], "\<\"partitionFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/partitionFunction"], "\<\"levelPopulation\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelPopulation"], "\<\"populationDifference\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/populationDifference"], \
+"\<\"absorptionCoefficient\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/absorptionCoefficient"], "\<\"opticalDepthLineCenter\"\
+\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/opticalDepthLineCenter"], "\<\"opticalDepth\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/opticalDepth"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/LTEOpticalDepth\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/LTEOpticalDepth"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/\
+LTEOpticalDepth.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$13080], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/LTEOpticalDepth", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["LTEOpticalDepth", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"LTEOpticalDepth", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["s", "TI"], ",", 
+          StyleBox["i", "TI"]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["t", "TI"], ",", 
+          StyleBox["col", "TI"], ",", 
+          StyleBox["f", "TI"]}], "}"}]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]computes the optical depth of a spectral line (species \
+",
+     Cell[BoxData[
+      StyleBox["s", "TI"]], "InlineFormula"],
+     ", transition ",
+     Cell[BoxData[
+      StyleBox["i", "TI"]], "InlineFormula"],
+     ") in K, assuming local thermal equilibrium (LTE) for an excitation \
+temperature ",
+     Cell[BoxData[
+      StyleBox["t", "TI"]], "InlineFormula"],
+     ", gas column density (of species s) ",
+     Cell[BoxData[
+      StyleBox["col", "TI"]], "InlineFormula"],
+     " and at frequency/velocity ",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->6287158],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Definition: ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["\[Tau]", "\[Nu]"], "=", 
+   RowBox[{
+    FractionBox["1", "\[CapitalDelta]v"], "\[CapitalPhi]", 
+    RowBox[{"(", "v", ")"}], 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      SubscriptBox["\[Kappa]", "\[Nu]"], "n", 
+      RowBox[{"\[DifferentialD]", "l"}]}]}]}]}]], "InlineFormula"],
+ " . Assuming a homogeneous medium the column density is ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["N", "col"], "=", 
+   RowBox[{"\[Integral]", 
+    RowBox[{"n", 
+     RowBox[{"\[DifferentialD]", "l"}]}]}]}]], "InlineFormula"],
+ "."
+}], "Notes",
+ InitializationCell->True,
+ CellID->1067943069],
+
+Cell[TextData[{
+ "A ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Gaussian"]],"paclet:LTE/ref/Gaussian"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula"],
+ " line profile \[CapitalPhi](v) is assumed."
+}], "Notes",
+ CellID->247220226],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<LineCenter\>\"", "0", Cell[TextData[{
+     "line",
+     " ",
+     "center",
+     " ",
+     "velocity/frequency",
+     " ",
+     "of",
+     " ",
+     "the",
+     " ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["Gaussian"]],"paclet:LTE/ref/Gaussian"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula"],
+     " ",
+     "line",
+     " ",
+     "profile"
+    }], "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<FullWidthHalfMaximum\>\"", "1", Cell[
+    TextData[{
+     "line",
+     " ",
+     "width",
+     " ",
+     "provided",
+     " ",
+     "as",
+     " ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["FWHM"]],"paclet:ref/FWHM"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula"],
+     " ",
+     "in",
+     " ",
+     "the",
+     " ",
+     "same",
+     " ",
+     "unist",
+     " ",
+     "as",
+     " ",
+     "used",
+     " ",
+     "for",
+     " ",
+     "velocity",
+     " ",
+     "and",
+     " ",
+     "\"LineCenter\""
+    }], "TableText"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->62138625],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->19150263],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->70916022],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22853840],
+
+Cell["\<\
+To get the line center optical depth we set the velocity to 0.\
+\>", "ExampleText",
+ CellID->168309334],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LTEOpticalDepth", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\"\<CO\>\"", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", 
+     SuperscriptBox["10", "16"], ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->442218101],
+
+Cell[BoxData["1.6197011052261214`"], "Output",
+ ImageSize->{46, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->114298925]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"LTEOpticalDepth", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<CO\>\"", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", 
+       SuperscriptBox["10", "16"], ",", "v"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->405061355],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+u4XZ8qx3vekSogx5Bhyy5Vl/gsx3+QDM5Znzli3PdAlRnjy9s2x5zvmfAkly
+VpWZ88xEaJRBJ3Bm3mk8c565S4gy3Lj/RHK1sfkq24fbjjz79Aha1saiWDlP
+nspcP+9+/Y20N9jhHMXKuW1+5jx7nYMARsbnM384EJL/l36ePOds6gAh2ikz
+OXc+SZ48c1cFxZKWhjRi88yjyJPnbDskAEmk8ZzzWO08efZYe4XiFDJiljPP
+ehwAO44iPz0qJecdjczjz0rv5tCERn62R0vEylk/SxNaGvBWO6gDUdIHlDDn
+3wcjZ569zih0/h8rvOGKGivLn2cdhbbdZwwI0q3L83fE8udZu6WS6pyfB2+y
+kfH5QgbK8udZC8NcaGRWYJVYSJ511I5NdJGNNlkLyU8hedbGPE0OZFNUY8PL
+Pf7sy3DUBeB1K8OidmAuJMxet3/KchXYmrjeKvAWc1F51n3OWfENK4WvCikq
+z15nQ3VpdbBpEszphOcCT2gtMM96Oi0rCmFIqj6pAIudn1lgnrV4Gc68wJtJ
+K+fMWxPEKjDPXreEnH6FnrT2K7yBWmye/SqaVjTS6T24wqu+YvPsdatoWtFI
+sd7eHjh/O+fSqlhF3U8Jkha+lJZ134glv7vlN3hJCSk8zF5nLFpK22g+pNWB
+KKmWy1vTVEaevW6rg9srCLkys1JqMErKs9c9ppClWFBbO6/lV3bZkSgvz9LY
+GL+2LOWXv21PFX8TlHflC5d/kemN+0/euXivgpPfy76qOiwzPDYnLZCczekj
+FgDzL6ekL7yMAgRfKd29xdXPpDaWzpRkQCrnzIvyyi6qlbVnL6U/K1+R/IRK
+I2R57UW2yVROfVE5P618r+U1UmuZPMp4ZUmfVl75/h/vv3vxntbG+pi43oqO
+M1td+Xq/9bGvlP6sdmz1IV/vhakleeS8qn+58/h3U0t//vuqawGIbWINAf0v
+GmxJu/zaOjIPdzbIir3atVhvb2e4kv/674u7i58uP27X/j0NPRh7r4U7eQby
+I884Sshz7dqzjeg51C6RAnZ7Am4X1OuDPPfTxVR2+eycre70VyYlbLYibzrK
+9Tz31cXcY5VPjX6r6XSeA6S8jn8LXM9zgPsX0zKf3R/Qfslzf1QofaIPLmZa
+PgPNpv3q+9AzzjQ5ouVUe792XL/+faMvLmb2fLpeP+99Zc5f/n7RhxfTNp9u
+57nTIXDu90if6suL6XY+AQAAAABV+j9PE+Ju
+    "], {{0, 157}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 157},
+  PlotRange->{{0, 240}, {0, 157}}]], "Output",
+ ImageSize->{244, 157},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[3]=",
+ CellID->501732896]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"LTEOpticalDepth", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<CO\>\"", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", 
+       SuperscriptBox["10", "15"], ",", "v"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->570054040],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 157}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 157},
+  PlotRange->{{0, 240}, {0, 157}}]], "Output",
+ ImageSize->{244, 157},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[4]=",
+ CellID->401596060]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->2061341341],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\"LineCenter\"",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->1757724783],
+
+Cell["\<\
+The Option \"LineCenter\" can be used to shift the Gaussian line profile to a \
+non-zero central position:\
+\>", "ExampleText",
+ CellID->1355684],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"LTEOpticalDepth", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<CO\>\"", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", 
+       SuperscriptBox["10", "16"], ",", "v"}], "}"}], ",", 
+     RowBox[{"\"\<LineCenter\>\"", "\[Rule]", "2"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->275642191],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 157}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 157},
+  PlotRange->{{0, 240}, {0, 157}}]], "Output",
+ ImageSize->{244, 157},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->13847527]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\"FullWidthHalfMaximum\"",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->1295379749],
+
+Cell["\<\
+The Option \"FullWidthHalfMaximum\" can be used to use the Gaussian line \
+profile with a different line width:\
+\>", "ExampleText",
+ CellID->739674813],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"LTEOpticalDepth", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<CO\>\"", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", 
+       SuperscriptBox["10", "16"], ",", "v"}], "}"}], ",", 
+     RowBox[{"\"\<FullWidthHalfMaximum\>\"", "\[Rule]", "2"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->39467575],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+
+    "], {{0, 157}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 157},
+  PlotRange->{{0, 240}, {0, 157}}]], "Output",
+ ImageSize->{244, 157},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->26760141]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["populationRatio"]],"paclet:LTE/ref/populationRatio"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["partitionFunction"]],"paclet:LTE/ref/partitionFunction"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelPopulation"]],"paclet:LTE/ref/levelPopulation"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["populationDifference"]],"paclet:LTE/ref/populationDifference"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["absorptionCoefficient"]],
+    "paclet:LTE/ref/absorptionCoefficient"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["opticalDepthLineCenter"]],
+    "paclet:LTE/ref/opticalDepthLineCenter"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["opticalDepth"]],"paclet:LTE/ref/opticalDepth"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->695320701]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->351487677],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"LTEOpticalDepth",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 18.4800429}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Symbol", "language" -> "en", "paclet" -> "LTE", "status" -> "None",
+     "summary" -> 
+    "LTEOpticalDepth[{s, i}, {t, col, f}] computes the optical depth of a \
+spectral line (species s, transition i) in K, assuming local thermal \
+equilibrium (LTE) for an excitation temperature t, gas column density (of \
+species s) col and at frequency/velocity f.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "LTEOpticalDepth", "titlemodifier" -> "", 
+    "windowtitle" -> "LTEOpticalDepth", "type" -> "Symbol", "uri" -> 
+    "LTE/ref/LTEOpticalDepth"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[10357, 338, 386, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->19150263]},
+ "RasterizedOutput"->{
+  Cell[12195, 415, 4226, 77, 178, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->501732896],
+  Cell[16939, 514, 4238, 77, 178, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->401596060],
+  Cell[22365, 641, 4062, 74, 70, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->13847527],
+  Cell[27427, 755, 4433, 81, 70, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->26760141]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 38801, 1078},
+ {"RasterizedOutput", 38944, 1082}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 5095, 123, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5685, 146, 292, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[6002, 161, 1221, 38, 98, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[7248, 203, 736, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->6287158],
+Cell[7987, 229, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[8021, 231, 656, 22, 70, "Notes",
+ InitializationCell->True,
+ CellID->1067943069],
+Cell[8680, 255, 259, 9, 70, "Notes",
+ CellID->247220226],
+Cell[8942, 266, 1332, 64, 70, "3ColumnTableMod",
+ CellID->62138625],
+Cell[10277, 332, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10357, 338, 386, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->19150263],
+Cell[CellGroupData[{
+Cell[10768, 357, 194, 6, 25, "ExampleSection",
+ CellID->70916022],
+Cell[10965, 365, 111, 3, 26, "Input",
+ CellID->22853840],
+Cell[11079, 370, 113, 3, 33, "ExampleText",
+ CellID->168309334],
+Cell[CellGroupData[{
+Cell[11217, 377, 281, 9, 31, "Input",
+ CellID->442218101],
+Cell[11501, 388, 176, 5, 35, "Output",
+ CellID->114298925]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11714, 398, 478, 15, 31, "Input",
+ CellID->405061355],
+Cell[12195, 415, 4226, 77, 178, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->501732896]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16458, 497, 478, 15, 31, "Input",
+ CellID->570054040],
+Cell[16939, 514, 4238, 77, 178, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->401596060]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21226, 597, 189, 6, 70, "ExampleSection",
+ CellID->2061341341],
+Cell[CellGroupData[{
+Cell[21440, 607, 202, 6, 70, "ExampleSubsection",
+ CellID->1757724783],
+Cell[21645, 615, 155, 4, 70, "ExampleText",
+ CellID->1355684],
+Cell[CellGroupData[{
+Cell[21825, 623, 537, 16, 70, "Input",
+ CellID->275642191],
+Cell[22365, 641, 4062, 74, 70, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->13847527]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[26476, 721, 212, 6, 70, "ExampleSubsection",
+ CellID->1295379749],
+Cell[26691, 729, 162, 4, 70, "ExampleText",
+ CellID->739674813],
+Cell[CellGroupData[{
+Cell[26878, 737, 546, 16, 70, "Input",
+ CellID->39467575],
+Cell[27427, 755, 4433, 81, 70, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->26760141]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[31899, 841, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31967, 846, 270, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[32240, 860, 2186, 63, 70, "SeeAlso",
+ CellID->695320701]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34463, 928, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[34738, 942, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[34772, 944, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[34993, 952, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[35235, 960, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35303, 965, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[35582, 979, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[35616, 981, 199, 6, 70, "MoreAbout",
+ CellID->351487677],
+Cell[35818, 989, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35886, 994, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[36169, 1008, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[36203, 1010, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[36416, 1018, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[36664, 1027, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

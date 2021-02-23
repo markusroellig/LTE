@@ -1,0 +1,658 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21740,        649]
+NotebookOptionsPosition[     18140,        552]
+NotebookOutlinePosition[     20059,        595]
+CellTagsIndexPosition[     20016,        592]
+WindowTitle->LTE - Radiative Transfer
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"absorptionCoefficient\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/absorptionCoefficient"], "\<\"einsteinAList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/einsteinAList"], "\<\"energyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/energyList"], "\<\"Erg2Kelvin\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2Kelvin"], "\<\"Erg2KelvinKmsec\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2KelvinKmsec"], "\<\"frequencyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/frequencyList"], "\<\"FromRayleighTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/FromRayleighTemperature"], "\<\"Gaussian\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Gaussian"], "\<\"Kelvin2Erg\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Kelvin2Erg"], "\<\"KelvinKmsec2Erg\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/KelvinKmsec2Erg"], "\<\"levelEnergy\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelEnergy"], "\<\"levelPopulation\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelPopulation"], "\<\"LTEBrightnessTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/LTEBrightnessTemperature"], "\<\"LTEOpticalDepth\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/LTEOpticalDepth"], "\<\"LTERadiationTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/LTERadiationTemperature"], "\<\"partitionFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/partitionFunction"], "\<\"Planck\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Planck"], "\<\"populationDifference\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/populationDifference"], "\<\"populationRatio\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/populationRatio"], "\<\"RayleighJeans\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/RayleighJeans"], "\<\"statisticalWeight\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/statisticalWeight"], "\<\"ToRayleighTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/ToRayleighTemperature"], "\<\"transitionEinsteinA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionEinsteinA"], "\<\"transitionFrequency\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionFrequency"], "\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionLowerLevel"], \
+"\<\"transitionUpperEnergy\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperEnergy"], \
+"\<\"transitionUpperLevel\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperLevel"], "\<\"wavenumberToKelvin\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/wavenumberToKelvin"], "\<\"weightList\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/weightList"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideTutorial"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/guide/LTE - Radiative Transfer\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/guide/LTE - Radiative Transfer"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/guide/LTE - \
+Radiative Transfer.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$2919], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/guide/LTE - Radiative Transfer", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["LTE - Radiative Transfer", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+LTE - Local Thermal Equilibrium describes a condition, where the energetic \
+state of a medium is locally exclusively described by its kinetic \
+temperature. LTE is a common assumption in basic astrophysical modelling \
+approaches. The LTE`package provides a set of functions to perform such basic \
+LTE model tasks in the astrophysical context of modelling the emission and \
+absorption of the interstellar medium (ISM). \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LTEBrightnessTemperature"]],
+    "paclet:LTE/ref/LTEBrightnessTemperature"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " LTE brightness temperature of a spectral line"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LTEOpticalDepth"]],"paclet:LTE/ref/LTEOpticalDepth"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " LTE optical depth of a spectral line"
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LTERadiationTemperature"]],
+    "paclet:LTE/ref/LTERadiationTemperature"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " optical thin blackbody  radiation temperature"
+}], "GuideText",
+ CellID->186950911],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->345497316],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData[
+      StyleBox["lamdaData", "TI"]]],"paclet:LTE/ref/lamdaData"},
+   "RefLink",
+   BaseStyle->{"InlineGuideFunction", "TI2"}]], "InlineGuideFunction"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Leiden Atomic and Molecular Database"
+}], "GuideText",
+ CellID->11614727]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->46786168],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["partitionFunction"]],"paclet:LTE/ref/partitionFunction"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["populationRatio"]],"paclet:LTE/ref/populationRatio"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelPopulation"]],"paclet:LTE/ref/levelPopulation"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["populationDifference"]],"paclet:LTE/ref/populationDifference"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " "
+}], "InlineGuideFunctionListing",
+ CellID->8525103],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["absorptionCoefficient"]],"paclet:LTE/ref/absorptionCoefficient"},
+  "RefLink",
+  BaseStyle->
+   "InlineFunctionSans"]], "InlineFunctionSans"]], \
+"InlineGuideFunctionListing",
+ CellID->416134698]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionEinsteinA"]],"paclet:LTE/ref/transitionEinsteinA"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionFrequency"]],"paclet:LTE/ref/transitionFrequency"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperLevel"]],"paclet:LTE/ref/transitionUpperLevel"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperEnergy"]],
+    "paclet:LTE/ref/transitionUpperEnergy"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["frequencyList"]],"paclet:LTE/ref/frequencyList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["einsteinAList"]],"paclet:LTE/ref/einsteinAList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->58033752],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelEnergy"]],"paclet:LTE/ref/levelEnergy"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["statisticalWeight"]],"paclet:LTE/ref/statisticalWeight"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["energyList"]],"paclet:LTE/ref/energyList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["weightList"]],"paclet:LTE/ref/weightList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->503170382]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->545833264],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FromRayleighTemperature"]],
+    "paclet:LTE/ref/FromRayleighTemperature"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ToRayleighTemperature"]],
+    "paclet:LTE/ref/ToRayleighTemperature"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2Kelvin"]],"paclet:LTE/ref/Erg2Kelvin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2KelvinKmsec"]],"paclet:LTE/ref/Erg2KelvinKmsec"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Kelvin2Erg"]],"paclet:LTE/ref/Kelvin2Erg"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["KelvinKmsec2Erg"]],"paclet:LTE/ref/KelvinKmsec2Erg"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["wavenumberToKelvin"]],"paclet:LTE/ref/wavenumberToKelvin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->52848203],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RayleighJeans"]],"paclet:LTE/ref/RayleighJeans"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Planck"]],"paclet:LTE/ref/Planck"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Gaussian"]],"paclet:LTE/ref/Gaussian"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->15344149]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "GuideRelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->415694148],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database "]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"GuideRelatedLinks"}]]]], "GuideRelatedLinks",
+ CellID->623776375]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"LTE - Radiative Transfer",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 49, 47.2528489}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "L T E Guide", "language" -> "en", "paclet" -> "LTE", 
+    "status" -> "None", "summary" -> 
+    "LTE - Local Thermal Equilibrium describes a condition, where the \
+energetic state of a medium is locally exclusively described by its kinetic \
+temperature. LTE is a common assumption in basic astrophysical modelling \
+approaches. The LTE`package provides a set of functions to perform such basic \
+LTE model tasks in the astrophysical context of modelling the emission and \
+absorption of the interstellar medium (ISM). ", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$2797, "title" -> 
+    "LTE - Radiative Transfer", "titlemodifier" -> "", "windowtitle" -> 
+    "LTE - Radiative Transfer", "type" -> "Guide", "uri" -> 
+    "LTE/guide/LTE - Radiative Transfer"}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[596, 21, 6721, 148, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[7342, 173, 66, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[7411, 176, 476, 8, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7924, 189, 257, 11, 70, "GuideReferenceSection"],
+Cell[8184, 202, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[8218, 204, 352, 11, 70, "GuideText",
+ CellID->203374175],
+Cell[8573, 217, 321, 10, 70, "GuideText",
+ CellID->1463276848],
+Cell[8897, 229, 350, 11, 70, "GuideText",
+ CellID->186950911],
+Cell[CellGroupData[{
+Cell[9272, 244, 48, 1, 70, "GuideDelimiter",
+ CellID->345497316],
+Cell[9323, 247, 341, 11, 70, "GuideText",
+ CellID->11614727]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9701, 263, 47, 1, 70, "GuideDelimiter",
+ CellID->46786168],
+Cell[9751, 266, 1167, 36, 70, "InlineGuideFunctionListing",
+ CellID->8525103],
+Cell[10921, 304, 257, 7, 70, "InlineGuideFunctionListing",
+ CellID->416134698]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11215, 316, 48, 1, 70, "GuideDelimiter",
+ CellID->311258892],
+Cell[11266, 319, 2094, 64, 70, "InlineGuideFunctionListing",
+ CellID->58033752],
+Cell[13363, 385, 1121, 34, 70, "InlineGuideFunctionListing",
+ CellID->503170382]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14521, 424, 48, 1, 70, "GuideDelimiter",
+ CellID->545833264],
+Cell[14572, 427, 2065, 63, 70, "InlineGuideFunctionListing",
+ CellID->52848203],
+Cell[16640, 492, 809, 25, 70, "InlineGuideFunctionListing",
+ CellID->15344149]
+}, Open  ]],
+Cell[17464, 520, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17532, 525, 284, 12, 70, "GuideRelatedLinksSection",
+ CellID->415694148],
+Cell[17819, 539, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[17853, 541, 245, 6, 70, "GuideRelatedLinks",
+ CellID->623776375]
+}, Open  ]],
+Cell[18113, 550, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

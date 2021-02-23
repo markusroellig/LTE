@@ -1,0 +1,1540 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     60103,       1530]
+NotebookOptionsPosition[     54917,       1368]
+NotebookOutlinePosition[     57093,       1427]
+CellTagsIndexPosition[     57007,       1422]
+WindowTitle->frequencyList
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionLowerLevel"], "\<\"transitionUpperLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperLevel"], \
+"\<\"transitionUpperEnergy\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperEnergy"], "\<\"transitionFrequency\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionFrequency"], "\<\"transitionEinsteinA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionEinsteinA"], "\<\"einsteinAList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/einsteinAList"], "\<\"lamdaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/lamdaData"], "\<\"levelEnergy\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelEnergy"], "\<\"energyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/energyList"], "\<\"statisticalWeight\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/statisticalWeight"], "\<\"weightList\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/weightList"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/frequencyList\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/frequencyList"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/frequencyList.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7036], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/frequencyList", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["frequencyList", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"frequencyList", "[", 
+       StyleBox["s", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]returns a list of the transition frequencies of all \
+energy level transitions of species ",
+     Cell[BoxData[
+      StyleBox["s", "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->201186022],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Helper function call to the ",
+ Cell[BoxData[
+  StyleBox["lamdaData", "TI"]], "InlineFormula"],
+ " function."
+}], "Notes",
+ CellID->1067943069],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->19637914],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->63600300],
+
+Cell[TextData[{
+ Cell[BoxData["frequencyList"], "InlineFormula"],
+ " collects all Einstein A coefficients from the LAMDA entry."
+}], "ExampleText",
+ CellID->6581783],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->333744218],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"transitionFrequency", "[", 
+  RowBox[{"\"\<CO\>\"", ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->116408150],
+
+Cell[BoxData["1.152711912`*^11"], "Output",
+ ImageSize->{89, 16},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->611195340]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"frequencyList", "[", "\"\<CO\>\"", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->498706986],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1.152711912`*^11", ",", "2.305379938`*^11", ",", "3.457959762`*^11", ",", 
+   "4.610406784`*^11", ",", "5.762679118`*^11", ",", "6.914731878`*^11", ",", 
+   "8.066514744`*^11", ",", "9.217993408`*^11", ",", 
+   "1.0369128986000001`*^12", ",", "1.151985515`*^12", ",", 
+   "1.2670137589`*^12", ",", "1.3819953433`*^12", ",", "1.4969220341`*^12", 
+   ",", "1.6117942887`*^12", ",", "1.7266025007`*^12", ",", 
+   "1.8413448403`*^12", ",", "1.956017648`*^12", ",", 
+   "2.0706172640999998`*^12", ",", "2.1851327101000002`*^12", ",", 
+   "2.2995694751`*^12", ",", "2.4139165806`*^12", ",", "2.5281740264`*^12", 
+   ",", "2.6423308339`*^12", ",", "2.7563851733`*^12", ",", 
+   "2.8703407041`*^12", ",", "2.9841791285`*^12", ",", "3.0979077656`*^12", 
+   ",", "3.2115192963`*^12", ",", "3.3250064015`*^12", ",", 
+   "3.4383654214`*^12", ",", "3.5515926967`*^12", ",", "3.6646845676`*^12", 
+   ",", "3.7776300555`*^12", ",", "3.8904511179`*^12", ",", 
+   "4.0031001801`*^12", ",", "4.1156028594`*^12", ",", 
+   "4.2279591555999995`*^12", ",", "4.3401324729999995`*^12", ",", 
+   "4.4521594074`*^12", ",", "4.564003363`*^12", ",", "4.6756862972`*^12", 
+   ",", "4.7871642953`*^12", ",", "4.8984885911`*^12", ",", 
+   "5.0096152698`*^12", ",", "5.1205370123`*^12", ",", "5.2312830952`*^12", 
+   ",", "5.3418096035`*^12", ",", "5.4521384947`*^12", ",", 
+   "5.5622624497`*^12", ",", "5.6721668301`*^12", ",", "5.781851636`*^12", 
+   ",", "5.8913461439`*^12", ",", "6.0005478858`*^12", ",", 
+   "6.109573968`*^12", ",", "6.2183658374`*^12", ",", "6.3268942173`*^12", 
+   ",", "6.435173746`*^12", ",", "6.5432483386`*^12", ",", "6.651030165`*^12",
+    ",", "6.7585777786`*^12", ",", "6.8658619028`*^12", ",", 
+   "6.9728825375`*^12", ",", "7.0795957678`*^12", ",", "7.1861187002`*^12", 
+   ",", "7.2922903133`*^12", ",", "7.3982130752`*^12", ",", 
+   "7.5038577094`*^12", ",", "7.6092242158`*^12", ",", "7.714239403`*^12", 
+   ",", "7.8190203773`*^12", ",", "7.9234793089`*^12", ",", 
+   "8.0276161979`*^12", ",", "8.1314310442`*^12", ",", 
+   "8.234982400999999`*^12", ",", "8.338182438600001`*^12", ",", 
+   "8.44108971`*^12", ",", "8.543645662299999`*^12", ",", "8.6458795718`*^12",
+    ",", "8.7478207153`*^12", ",", "8.8493227097`*^12"}], "}"}]], "Output",
+ ImageSize->{488, 276},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->60950720]
+}, Open  ]],
+
+Cell["\<\
+By default all Units are stripped. The result is given in Hz.\
+\>", "ExampleText",
+ CellID->249951506],
+
+Cell["Compare with the first three transitions of the CO molecule.", \
+"ExampleText",
+ CellID->26108241],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lambdaData", "[", 
+   RowBox[{"\"\<CO\>\"", ",", "\"\<Transitions\>\""}], "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ";;", "3"}], "]"}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->88763217],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 3, "Length" -> 3, "InitialType" -> TypeSystem`Assoc[
+          TypeSystem`Atom[Integer], 
+          
+          TypeSystem`Struct[{
+           "UpperLevel", "LowerLevel", "EinsteinA", "Frequency", 
+            "FrequencyUnit", "EnergyUpper", "EnergyUnit"}, {
+            TypeSystem`Atom[Integer], 
+            TypeSystem`Atom[Integer], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[
+             Quantity[1, "Gigahertz"]], 
+            TypeSystem`Atom[String], 
+            TypeSystem`Atom[
+             Quantity[1, "Kelvins"]], 
+            TypeSystem`Atom[String]}], 3], "Shape" -> 
+        TypeSystem`PackageScope`HeaderShape[
+          Association[{All, 
+             TypeSystem`PackageScope`KeyDummy[6]} -> 1, {All, "UpperLevel"} -> 
+           1, {All, "LowerLevel"} -> 1, {All, "EinsteinA"} -> 
+           1, {All, "Frequency"} -> 1, {All, "FrequencyUnit"} -> 
+           1, {All, "EnergyUpper"} -> 1, {All, "EnergyUnit"} -> 1], 
+          TypeSystem`PackageScope`Limited[
+           TypeSystem`PackageScope`ColumnShape[
+            TypeSystem`PackageScope`KeyValueShape[
+             TypeSystem`PackageScope`AtomShape[34], 
+             TypeSystem`PackageScope`RowShape[
+              Association[
+              "UpperLevel" -> TypeSystem`PackageScope`AtomShape[34], 
+               "LowerLevel" -> TypeSystem`PackageScope`AtomShape[34], 
+               "EinsteinA" -> TypeSystem`PackageScope`AtomShape[60], 
+               "Frequency" -> TypeSystem`PackageScope`AtomShape[75], 
+               "FrequencyUnit" -> 
+               TypeSystem`PackageScope`AtomShape[28.800000000000004`], 
+               "EnergyUpper" -> TypeSystem`PackageScope`AtomShape[75], 
+               "EnergyUnit" -> 
+               TypeSystem`PackageScope`AtomShape[57.60000000000001]]]]], 
+           3, {}]], "InitialData" -> 
+        TypeSystem`PackageScope`CacheHandle[10436555], "Type" -> 
+        TypeSystem`Assoc[
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Struct[{
+           "UpperLevel", "LowerLevel", "EinsteinA", "Frequency", 
+            "FrequencyUnit", "EnergyUpper", "EnergyUnit"}, {
+            TypeSystem`Atom[Integer], 
+            TypeSystem`Atom[Integer], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[
+             Quantity[1, "Gigahertz"]], 
+            TypeSystem`Atom[String], 
+            TypeSystem`Atom[
+             Quantity[1, "Kelvins"]], 
+            TypeSystem`Atom[String]}], 3], "HandleQ" -> True, "RowTarget" -> 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[10436555]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    Style[
+                    RawBoxes[
+                    StyleBox["\"\"", FontColor -> GrayLevel[0.4]]], Italic, 
+                    GrayLevel[0.7]], {{20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    Style[
+                    RawBoxes[
+                    StyleBox[
+                    "\"\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], Italic, 
+                    GrayLevel[0.7]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, Keys}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, Keys]], "Mouse"], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"UpperLevel\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"UpperLevel\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "UpperLevel"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "UpperLevel"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"LowerLevel\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"LowerLevel\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "LowerLevel"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "LowerLevel"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EinsteinA\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EinsteinA\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "EinsteinA"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "EinsteinA"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Frequency\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Frequency\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "Frequency"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "Frequency"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"FrequencyUnit\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"FrequencyUnit\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "FrequencyUnit"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "FrequencyUnit"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EnergyUpper\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EnergyUpper\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "EnergyUpper"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "EnergyUpper"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EnergyUnit\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"EnergyUnit\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    All, "EnergyUnit"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[All, "EnergyUnit"]], "Mouse"], 
+                Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover[
+                    RawBoxes["1"], 
+                    Style[
+                    RawBoxes["1"], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    Key[1]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                   GeneralUtilities`Slice[
+                    Key[1]]], "Mouse"], ImageSize -> {{34, Full}, Automatic}],
+                 Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["2"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["UpperLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["LowerLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["0.00000007203"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["EinsteinA"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"115.2711912`", "\"GHz\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["Frequency"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["GHz", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["FrequencyUnit"]]], "Mouse"], 
+                ImageSize -> {{28.800000000000004`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"5.53`", "\"K\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["EnergyUpper"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["Kelvin", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[1], 
+                   Key["EnergyUnit"]]], "Mouse"], 
+                ImageSize -> {{57.60000000000001, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover[
+                    RawBoxes["2"], 
+                    Style[
+                    RawBoxes["2"], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    Key[2]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                   GeneralUtilities`Slice[
+                    Key[2]]], "Mouse"], ImageSize -> {{34, Full}, Automatic}],
+                 Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["UpperLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["2"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["LowerLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["0.000000691"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["EinsteinA"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"230.5379938`", "\"GHz\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["Frequency"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["GHz", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["FrequencyUnit"]]], "Mouse"], 
+                ImageSize -> {{28.800000000000004`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"16.6`", "\"K\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["EnergyUpper"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["Kelvin", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[2], 
+                   Key["EnergyUnit"]]], "Mouse"], 
+                ImageSize -> {{57.60000000000001, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover[
+                    RawBoxes["3"], 
+                    Style[
+                    RawBoxes["3"], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][{
+                    Key[3]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                   GeneralUtilities`Slice[
+                    Key[3]]], "Mouse"], ImageSize -> {{34, Full}, Automatic}],
+                 Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["4"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["UpperLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["LowerLevel"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["0.000002497"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["EinsteinA"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"345.7959762`", "\"GHz\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["Frequency"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["GHz", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["FrequencyUnit"]]], "Mouse"], 
+                ImageSize -> {{28.800000000000004`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"33.19`", "\"K\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["EnergyUpper"]]], "Mouse"], 
+                ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["Kelvin", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+                  GeneralUtilities`Slice[
+                   Key[3], 
+                   Key["EnergyUnit"]]], "Mouse"], 
+                ImageSize -> {{57.60000000000001, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}}, BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        Initialization :> If[
+          Not[$CloudEvaluation], 
+          TypeSystem`NestedGrid`PackagePrivate`attachScrollbar[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$]], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+         TypeSystem`PackageScope`Pathbar[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+          TypeSystem`NestedGrid`PackagePrivate`updateState[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 17950000]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[17950000][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$]], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]], DynamicModuleValues :> {}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$]], Deploy, 
+    DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ ImageSize->{34, 18},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->12877622]
+}, Open  ]],
+
+Cell["The entry with units", "ExampleText",
+ CellID->143544763],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lambdaData", "[", 
+  RowBox[{
+  "\"\<CO\>\"", ",", "\"\<Transitions\>\"", ",", "1", ",", 
+   "\"\<Frequency\>\""}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->257367900],
+
+Cell[BoxData[
+ TemplateBox[{"115.2711912`","\"GHz\"","gigahertz","\"Gigahertz\""},
+  "Quantity"]], "Output",
+ ImageSize->{85, 23},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->351224141]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->420823823],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Quantity", "[", 
+    RowBox[{"115.2711912`", ",", "\"\<Gigahertz\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ ImageSize->{246, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]//FullForm=",
+ CellID->326554785]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QuantityMagnitude", "[", 
+  RowBox[{"lambdaData", "[", 
+   RowBox[{
+   "\"\<CO\>\"", ",", "\"\<Transitions\>\"", ",", "1", ",", 
+    "\"\<Frequency\>\""}], "]"}], "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->8513607],
+
+Cell[BoxData["115.2711912`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->390134740]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperLevel"]],"paclet:LTE/ref/transitionUpperLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperEnergy"]],
+    "paclet:LTE/ref/transitionUpperEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionFrequency"]],"paclet:LTE/ref/transitionFrequency"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionEinsteinA"]],"paclet:LTE/ref/transitionEinsteinA"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["einsteinAList"]],"paclet:LTE/ref/einsteinAList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["lamdaData"]],"paclet:LTE/ref/lamdaData"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelEnergy"]],"paclet:LTE/ref/levelEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["energyList"]],"paclet:LTE/ref/energyList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["statisticalWeight"]],"paclet:LTE/ref/statisticalWeight"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["weightList"]],"paclet:LTE/ref/weightList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->69568604],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"frequencyList",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 49, 59.1995429}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Symbol", "language" -> "en", "paclet" -> "LTE", "status" -> "None",
+     "summary" -> 
+    "frequencyList[s] returns a list of the transition frequencies of all \
+energy level transitions of species s.", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "frequencyList", "titlemodifier" -> "", "windowtitle" -> 
+    "frequencyList", "type" -> "Symbol", "uri" -> "LTE/ref/frequencyList"}, 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7952, 231, 386, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->19637914]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 56865, 1415}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 5477, 131, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[6065, 154, 290, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[6380, 169, 528, 16, 82, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[6933, 189, 738, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->201186022],
+Cell[7674, 215, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7708, 217, 161, 6, 70, "Notes",
+ CellID->1067943069],
+Cell[7872, 225, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7952, 231, 386, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->19637914],
+Cell[CellGroupData[{
+Cell[8363, 250, 194, 6, 25, "ExampleSection",
+ CellID->63600300],
+Cell[8560, 258, 165, 4, 34, "ExampleText",
+ CellID->6581783],
+Cell[8728, 264, 112, 3, 26, "Input",
+ CellID->333744218],
+Cell[CellGroupData[{
+Cell[8865, 271, 147, 4, 26, "Input",
+ CellID->116408150],
+Cell[9015, 277, 173, 5, 37, "Output",
+ CellID->611195340]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9225, 287, 118, 3, 26, "Input",
+ CellID->498706986],
+Cell[9346, 292, 2422, 40, 297, "Output",
+ CellID->60950720]
+}, Open  ]],
+Cell[11783, 335, 112, 3, 33, "ExampleText",
+ CellID->249951506],
+Cell[11898, 340, 104, 2, 70, "ExampleText",
+ CellID->26108241],
+Cell[CellGroupData[{
+Cell[12027, 346, 232, 7, 70, "Input",
+ CellID->88763217],
+Cell[12262, 355, 35086, 721, 70, "Output",
+ CellID->12877622]
+}, Open  ]],
+Cell[47363, 1079, 63, 1, 70, "ExampleText",
+ CellID->143544763],
+Cell[CellGroupData[{
+Cell[47451, 1084, 199, 6, 70, "Input",
+ CellID->257367900],
+Cell[47653, 1092, 238, 7, 70, "Output",
+ CellID->351224141]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47928, 1104, 104, 3, 70, "Input",
+ CellID->420823823],
+Cell[48035, 1109, 378, 13, 49, "Output",
+ CellID->326554785]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48450, 1127, 244, 7, 70, "Input",
+ CellID->8513607],
+Cell[48697, 1136, 169, 5, 35, "Output",
+ CellID->390134740]
+}, Open  ]]
+}, Open  ]],
+Cell[48893, 1145, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48961, 1150, 270, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[49234, 1164, 3419, 98, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52690, 1267, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[52965, 1281, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[52999, 1283, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[53220, 1291, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[53462, 1299, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53530, 1304, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[53809, 1318, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[53843, 1320, 198, 6, 70, "MoreAbout",
+ CellID->69568604],
+Cell[54044, 1328, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54112, 1333, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[54395, 1347, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[54429, 1349, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[54642, 1357, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[54890, 1366, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

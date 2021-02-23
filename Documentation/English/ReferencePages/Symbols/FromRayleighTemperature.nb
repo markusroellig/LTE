@@ -1,0 +1,702 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20591,        692]
+NotebookOptionsPosition[     15816,        548]
+NotebookOutlinePosition[     18130,        608]
+CellTagsIndexPosition[     18045,        603]
+WindowTitle->FromRayleighTemperature
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E PACKAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RayleighJeans\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/RayleighJeans"], "\<\"Planck\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Planck"], "\<\"ToRayleighTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/ToRayleighTemperature"], "\<\"Erg2Kelvin\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2Kelvin"], "\<\"Erg2KelvinKmsec\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2KelvinKmsec"], "\<\"Kelvin2Erg\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Kelvin2Erg"], "\<\"KelvinKmsec2Erg\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/KelvinKmsec2Erg"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/FromRayleighTemperature\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/FromRayleighTemperature"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/\
+FromRayleighTemperature.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7635], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/FromRayleighTemperature", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["FromRayleighTemperature", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"FromRayleighTemperature", "[", 
+       RowBox[{
+        StyleBox["t", "TI"], ",", 
+        StyleBox["f", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]corrects a Rayleigh-Jeans radiation temperature ",
+     Cell[BoxData[
+      StyleBox["t", "TI"]], "InlineFormula"],
+     " at a given frequency ",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula"],
+     " to the corresponding kinetic temperatures of a blackbody to yield the \
+same intensity."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->157528682],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell["Spectroscopic unit conversion.", "Notes",
+ CellID->1067943069],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->46527348],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->159447265],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->9223349],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RayleighJeans", "[", 
+  RowBox[{"tr", ",", "f"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->61487916],
+
+Cell[BoxData[
+ RowBox[{"3.072360599780856`*^-37", " ", 
+  SuperscriptBox["f", "2"], " ", "tr"}]], "Output",
+ ImageSize->{127, 16},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->100416808]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Planck", "[", 
+  RowBox[{"tbb", ",", "f"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->65683931],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"1.47449943138304`*^-47", " ", 
+   SuperscriptBox["f", "3"]}], 
+  RowBox[{
+   RowBox[{"-", "1"}], "+", 
+   SuperscriptBox["\[ExponentialE]", 
+    FractionBox[
+     RowBox[{"4.799239488646652`*^-11", " ", "f"}], "tbb"]]}]]], "Output",
+ ImageSize->{121, 41},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->394182551]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"RayleighJeans", "[", 
+     RowBox[{"tr", ",", "f"}], "]"}], "==", 
+    RowBox[{"Planck", "[", 
+     RowBox[{"tbb", ",", "f"}], "]"}]}], ",", "tbb"}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->248717055],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,321,37,26344164121929221610,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->279753112],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"tbb", "\[Rule]", 
+    FractionBox[
+     RowBox[{"4.799239488646652`*^-11", " ", "f"}], 
+     RowBox[{"Log", "[", 
+      RowBox[{"1.`", "\[VeryThinSpace]", "+", 
+       FractionBox[
+        RowBox[{"4.799239488646653`*^-11", " ", "f"}], "tr"]}], "]"}]]}], 
+   "}"}], "}"}]], "Output",
+ ImageSize->{215, 44},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->980980011]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromRayleighTemperature", "[", 
+  RowBox[{"tr", ",", "f"}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->82979748],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"4.799239488646653`*^-11", " ", "f"}], 
+  RowBox[{"Log", "[", 
+   RowBox[{"1.`", "\[VeryThinSpace]", "+", 
+    FractionBox[
+     RowBox[{"4.799239488646653`*^-11", " ", "f"}], "tr"]}], "]"}]]], "Output",
+ ImageSize->{149, 44},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->76059018]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RayleighJeans"]],"paclet:LTE/ref/RayleighJeans"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Planck"]],"paclet:LTE/ref/Planck"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ToRayleighTemperature"]],
+    "paclet:LTE/ref/ToRayleighTemperature"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2Kelvin"]],"paclet:LTE/ref/Erg2Kelvin"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2KelvinKmsec"]],"paclet:LTE/ref/Erg2KelvinKmsec"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Kelvin2Erg"]],"paclet:LTE/ref/Kelvin2Erg"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["KelvinKmsec2Erg"]],"paclet:LTE/ref/KelvinKmsec2Erg"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->546419389],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FromRayleighTemperature",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 2.1012763}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Package Symbol", "language" -> "en", "paclet" -> "LTE Package", 
+    "status" -> "None", "summary" -> 
+    "FromRayleighTemperature[t, f] corrects a Rayleigh-Jeans radiation \
+temperature t at a given frequency f to the corresponding kinetic \
+temperatures of a blackbody to yield the same intensity.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "FromRayleighTemperature", "titlemodifier" -> 
+    "", "windowtitle" -> "FromRayleighTemperature", "type" -> "Symbol", "uri" -> 
+    "LTE/ref/FromRayleighTemperature"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7668, 222, 386, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->46527348]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 17903, 596}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 5082, 123, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5680, 146, 300, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[6005, 161, 712, 20, 96, "Usage"],
+Cell[CellGroupData[{
+Cell[6742, 185, 738, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->157528682],
+Cell[7483, 211, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7517, 213, 68, 1, 70, "Notes",
+ CellID->1067943069],
+Cell[7588, 216, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7668, 222, 386, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->46527348],
+Cell[CellGroupData[{
+Cell[8079, 241, 195, 6, 25, "ExampleSection",
+ CellID->159447265],
+Cell[8277, 249, 110, 3, 26, "Input",
+ CellID->9223349],
+Cell[CellGroupData[{
+Cell[8412, 256, 132, 4, 26, "Input",
+ CellID->61487916],
+Cell[8547, 262, 238, 7, 37, "Output",
+ CellID->100416808]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8822, 274, 126, 4, 26, "Input",
+ CellID->65683931],
+Cell[8951, 280, 402, 13, 62, "Output",
+ CellID->394182551]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9390, 298, 283, 9, 26, "Input",
+ CellID->248717055],
+Cell[9676, 309, 363, 9, 39, "Message",
+ CellID->279753112],
+Cell[10042, 320, 471, 15, 65, "Output",
+ CellID->980980011]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10550, 340, 142, 4, 26, "Input",
+ CellID->82979748],
+Cell[10695, 346, 371, 11, 65, "Output",
+ CellID->76059018]
+}, Open  ]]
+}, Open  ]],
+Cell[11093, 361, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11161, 366, 270, 12, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[11434, 380, 2117, 62, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13588, 447, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[13863, 461, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13897, 463, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[14118, 471, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[14360, 479, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14428, 484, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[14707, 498, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[14741, 500, 199, 6, 70, "MoreAbout",
+ CellID->546419389],
+Cell[14943, 508, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15011, 513, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[15294, 527, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[15328, 529, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[15541, 537, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[15789, 546, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

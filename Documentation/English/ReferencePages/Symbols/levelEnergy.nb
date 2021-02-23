@@ -1,0 +1,1051 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38367,       1041]
+NotebookOptionsPosition[     33689,        895]
+NotebookOutlinePosition[     35717,        950]
+CellTagsIndexPosition[     35632,        945]
+WindowTitle->levelEnergy
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionLowerLevel"], "\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionLowerLevel"], \
+"\<\"transitionUpperEnergy\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperEnergy"], "\<\"transitionFrequency\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionFrequency"], "\<\"transitionEinsteinA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionEinsteinA"], "\<\"frequencyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/frequencyList"], "\<\"einsteinAList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/einsteinAList"], "\<\"lamdaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/lamdaData"], "\<\"energyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/energyList"], "\<\"statisticalWeight\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/statisticalWeight"], "\<\"weightList\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/weightList"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/levelEnergy\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/levelEnergy"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/levelEnergy.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$11258], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/levelEnergy", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["levelEnergy", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"levelEnergy", "[", 
+       RowBox[{
+        StyleBox["s", "TI"], ",", 
+        StyleBox["i", "TI"]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]returns the energy (in units of K) of level ",
+     Cell[BoxData[
+      StyleBox["i", "TI"]], "InlineFormula"],
+     " of species ",
+     Cell[BoxData[
+      StyleBox["s", "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->82295308],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Helper function call to the ",
+ Cell[BoxData[
+  StyleBox["lamdaData", "TI"]], "InlineFormula"],
+ " function."
+}], "Notes",
+ CellID->1067943069],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->287574205],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->174086960],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->84877539],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"levelEnergy", "[", 
+  RowBox[{"\"\<CO\>\"", ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->241490298],
+
+Cell[BoxData["5.532421825899282`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->170559505]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"energyList", "[", "\"\<CO\>\"", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->159100584],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "5.532421825899282`", ",", "16.59705484460432`", ",", 
+   "33.19347573669065`", ",", "55.32104711798562`", ",", "82.97893057553958`",
+    ",", "116.16607226906477`", ",", "154.8811768460432`", ",", 
+   "199.12278429208635`", ",", "248.88924797697845`", ",", 
+   "304.17860291798564`", ",", "364.98871947338137`", ",", 
+   "431.31735822302164`", ",", "503.1618845553957`", ",", 
+   "580.5196858143886`", ",", "663.387688286331`", ",", "751.7627304402879`", 
+   ",", "845.6414751007195`", ",", "945.0204094532374`", ",", 
+   "1049.895493761151`", ",", "1160.2629517482014`", ",", 
+   "1276.1184802158275`", ",", "1397.4577759669066`", ",", 
+   "1524.2760088805758`", ",", "1656.5682610158274`", ",", 
+   "1794.3297900748203`", ",", "1937.5549755510795`", ",", 
+   "2086.2385482244604`", ",", "2240.374887589928`", ",", 
+   "2399.9580218633096`", ",", "2564.981803620144`", ",", 
+   "2735.439909791367`", ",", "2911.325841670504`", ",", "3092.632573628777`",
+    ",", "3279.354133880576`", ",", "3471.4822673107915`", ",", 
+   "3669.0099482906476`", ",", "3871.9301511913673`", ",", 
+   "4080.2340939741007`", ",", "4293.914751011511`", ",", 
+   "4512.963340264749`", ",", "4737.372133542446`", ",", "4967.13129496403`", 
+   ",", "5202.233447617267`", ",", "5442.669106902159`", ",", 
+   "5688.42843693813`", ",", "5939.503006969785`", ",", "6195.882278552519`", 
+   ",", "6457.556767086332`", ",", "6724.516636690648`", ",", 
+   "6996.751348920864`", ",", "7274.250365332375`", ",", 
+   "7557.0045526071945`", ",", "7844.999859487771`", ",", 
+   "8138.227855215829`", ",", "8436.677298785613`", ",", "8740.335544064748`",
+    ",", "9049.190647482015`", ",", "9363.232773156837`", ",", 
+   "9682.447869828778`", ",", "10006.824696492087`", ",", 
+   "10336.35060701439`", ",", "10671.012955260432`", ",", 
+   "11010.796987410073`", ",", "11355.693570143887`", ",", 
+   "11705.68584195108`", ",", "12060.761859263312`", ",", 
+   "12420.908273381296`", ",", "12786.111735611512`", ",", 
+   "13156.355384443168`", ",", "13531.627978866189`", ",", 
+   "13911.914062500722`", ",", "14297.198178956836`", ",", 
+   "14687.464871853239`", ",", "15082.70149505324`", ",", 
+   "15482.891187050362`", ",", "15888.019896582735`", ",", 
+   "16298.07076214101`", ",", "16713.028327338132`", ",", 
+   "17132.878540917987`", ",", "17557.60032598849`"}], "}"}]], "Output",
+ ImageSize->{565, 143},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->307654923]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"levelEnergy", "[", 
+    RowBox[{"\"\<CO\>\"", ",", "#"}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", 
+   RowBox[{"2", ",", "81"}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->126993728],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "5.532421825899282`", ",", "16.59705484460432`", ",", "33.19347573669065`", 
+   ",", "55.32104711798562`", ",", "82.97893057553958`", ",", 
+   "116.16607226906477`", ",", "154.8811768460432`", ",", 
+   "199.12278429208635`", ",", "248.88924797697845`", ",", 
+   "304.17860291798564`", ",", "364.98871947338137`", ",", 
+   "431.31735822302164`", ",", "503.1618845553957`", ",", 
+   "580.5196858143886`", ",", "663.387688286331`", ",", "751.7627304402879`", 
+   ",", "845.6414751007195`", ",", "945.0204094532374`", ",", 
+   "1049.895493761151`", ",", "1160.2629517482014`", ",", 
+   "1276.1184802158275`", ",", "1397.4577759669066`", ",", 
+   "1524.2760088805758`", ",", "1656.5682610158274`", ",", 
+   "1794.3297900748203`", ",", "1937.5549755510795`", ",", 
+   "2086.2385482244604`", ",", "2240.374887589928`", ",", 
+   "2399.9580218633096`", ",", "2564.981803620144`", ",", 
+   "2735.439909791367`", ",", "2911.325841670504`", ",", "3092.632573628777`",
+    ",", "3279.354133880576`", ",", "3471.4822673107915`", ",", 
+   "3669.0099482906476`", ",", "3871.9301511913673`", ",", 
+   "4080.2340939741007`", ",", "4293.914751011511`", ",", 
+   "4512.963340264749`", ",", "4737.372133542446`", ",", "4967.13129496403`", 
+   ",", "5202.233447617267`", ",", "5442.669106902159`", ",", 
+   "5688.42843693813`", ",", "5939.503006969785`", ",", "6195.882278552519`", 
+   ",", "6457.556767086332`", ",", "6724.516636690648`", ",", 
+   "6996.751348920864`", ",", "7274.250365332375`", ",", 
+   "7557.0045526071945`", ",", "7844.999859487771`", ",", 
+   "8138.227855215829`", ",", "8436.677298785613`", ",", "8740.335544064748`",
+    ",", "9049.190647482015`", ",", "9363.232773156837`", ",", 
+   "9682.447869828778`", ",", "10006.824696492087`", ",", 
+   "10336.35060701439`", ",", "10671.012955260432`", ",", 
+   "11010.796987410073`", ",", "11355.693570143887`", ",", 
+   "11705.68584195108`", ",", "12060.761859263312`", ",", 
+   "12420.908273381296`", ",", "12786.111735611512`", ",", 
+   "13156.355384443168`", ",", "13531.627978866189`", ",", 
+   "13911.914062500722`", ",", "14297.198178956836`", ",", 
+   "14687.464871853239`", ",", "15082.70149505324`", ",", 
+   "15482.891187050362`", ",", "15888.019896582735`", ",", 
+   "16298.07076214101`", ",", "16713.028327338132`", ",", 
+   "17132.878540917987`", ",", "17557.60032598849`"}], "}"}]], "Output",
+ ImageSize->{552, 143},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->23079666]
+}, Open  ]],
+
+Cell[TextData[{
+ "The energies in lamdaData is stored in units of wavenumbers. Use ",
+ Cell[BoxData[
+  StyleBox["wavenumberToKelvin", "TI"]], "InlineFormula"],
+ " to convert to Kelvin."
+}], "ExampleText",
+ CellID->260105985],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lambdaData", "[", 
+  RowBox[{"\"\<CO\>\"", ",", "\"\<Levels\>\"", ",", 
+   RowBox[{"1", ";;", "4"}], ",", "\"\<Energy\>\""}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->17559144],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 4, "Length" -> 4, "InitialType" -> TypeSystem`Assoc[
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Atom[
+           Quantity[1, "Wavenumbers"]], 4], "Shape" -> 
+        TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`ColumnShape[
+           TypeSystem`PackageScope`KeyValueShape[
+            TypeSystem`PackageScope`AtomShape[34], 
+            TypeSystem`PackageScope`AtomShape[75]]], 4, {}], "InitialData" -> 
+        TypeSystem`PackageScope`CacheHandle[1972594984], "Type" -> 
+        TypeSystem`Assoc[
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Atom[
+           Quantity[1, "Wavenumbers"]], 4], "HandleQ" -> True, "RowTarget" -> 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1972594984]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Pane[
+                 RawBoxes["1"], ImageSize -> {{34, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"0.`", "\"wavenumbers\""}], FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][
+                  GeneralUtilities`Slice[
+                   Key[1]]], "Mouse"], ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 RawBoxes["2"], ImageSize -> {{34, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"3.845033169`", "\"wavenumbers\""}], FontColor -> 
+                   RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][
+                  GeneralUtilities`Slice[
+                   Key[2]]], "Mouse"], ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 RawBoxes["3"], ImageSize -> {{34, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"11.534953117`", "\"wavenumbers\""}], FontColor -> 
+                   RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][
+                  GeneralUtilities`Slice[
+                   Key[3]]], "Mouse"], ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 RawBoxes["4"], ImageSize -> {{34, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   RowBox[{"23.069465637`", "\"wavenumbers\""}], FontColor -> 
+                   RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][
+                  GeneralUtilities`Slice[
+                   Key[4]]], "Mouse"], ImageSize -> {{75, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}}, BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 756089867][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        Initialization :> If[
+          Not[$CloudEvaluation], 
+          TypeSystem`NestedGrid`PackagePrivate`attachScrollbar[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$]], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+         TypeSystem`PackageScope`Pathbar[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+          TypeSystem`NestedGrid`PackagePrivate`updateState[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 756089867]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[756089867][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$]], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]], DynamicModuleValues :> {}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$]], Deploy, 
+    DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ ImageSize->{34, 18},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->178588312]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Normal", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"QuantityMagnitude", "/@", 
+      RowBox[{"Normal", "[", 
+       RowBox[{"lambdaData", "[", 
+        RowBox[{"\"\<CO\>\"", ",", "\"\<Levels\>\"", ",", 
+         RowBox[{"1", ";;", "4"}], ",", "\"\<Energy\>\""}], "]"}], "]"}]}], 
+     ")"}], "wavenumberToKelvin"}], "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "2"}], "]"}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->85045469],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "5.532421825899282`", ",", "16.59705484460432`", ",", 
+   "33.19347573669065`"}], "}"}]], "Output",
+ ImageSize->{212, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->125360294]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperEnergy"]],
+    "paclet:LTE/ref/transitionUpperEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionFrequency"]],"paclet:LTE/ref/transitionFrequency"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionEinsteinA"]],"paclet:LTE/ref/transitionEinsteinA"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["frequencyList"]],"paclet:LTE/ref/frequencyList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["einsteinAList"]],"paclet:LTE/ref/einsteinAList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["lamdaData"]],"paclet:LTE/ref/lamdaData"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["energyList"]],"paclet:LTE/ref/energyList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["statisticalWeight"]],"paclet:LTE/ref/statisticalWeight"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["weightList"]],"paclet:LTE/ref/weightList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->395121922],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"levelEnergy",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 11.4099688}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "L T E Symbol", "language" -> "en", "paclet" -> "LTE", 
+    "status" -> "None", "summary" -> 
+    "levelEnergy[s, i] returns the energy (in units of K) of level i of \
+species s.", "synonyms" -> {}, "tabletags" -> {}, "title" -> "levelEnergy", 
+    "titlemodifier" -> "", "windowtitle" -> "levelEnergy", "type" -> "Symbol",
+     "uri" -> "LTE/ref/levelEnergy"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8036, 235, 387, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->287574205]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 35489, 938}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[583, 21, 5474, 131, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[6060, 154, 288, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[6373, 169, 620, 20, 82, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[7018, 193, 737, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->82295308],
+Cell[7758, 219, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7792, 221, 161, 6, 70, "Notes",
+ CellID->1067943069],
+Cell[7956, 229, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8036, 235, 387, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->287574205],
+Cell[CellGroupData[{
+Cell[8448, 254, 195, 6, 25, "ExampleSection",
+ CellID->174086960],
+Cell[8646, 262, 111, 3, 26, "Input",
+ CellID->84877539],
+Cell[CellGroupData[{
+Cell[8782, 269, 139, 4, 26, "Input",
+ CellID->241490298],
+Cell[8924, 275, 175, 5, 35, "Output",
+ CellID->170559505]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9136, 285, 115, 3, 26, "Input",
+ CellID->159100584],
+Cell[9254, 290, 2537, 44, 164, "Output",
+ CellID->307654923]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11828, 339, 241, 8, 26, "Input",
+ CellID->126993728],
+Cell[12072, 349, 2524, 44, 164, "Output",
+ CellID->23079666]
+}, Open  ]],
+Cell[14611, 396, 224, 6, 70, "ExampleText",
+ CellID->260105985],
+Cell[CellGroupData[{
+Cell[14860, 406, 208, 5, 70, "Input",
+ CellID->17559144],
+Cell[15071, 413, 11756, 225, 70, "Output",
+ CellID->178588312]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26864, 643, 482, 14, 70, "Input",
+ CellID->85045469],
+Cell[27349, 659, 284, 9, 35, "Output",
+ CellID->125360294]
+}, Open  ]]
+}, Open  ]],
+Cell[27660, 672, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27728, 677, 270, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[28001, 691, 3423, 98, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31461, 794, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[31736, 808, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[31770, 810, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[31991, 818, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[32233, 826, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32301, 831, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[32580, 845, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[32614, 847, 199, 6, 70, "MoreAbout",
+ CellID->395121922],
+Cell[32816, 855, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32884, 860, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[33167, 874, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[33201, 876, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[33414, 884, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[33662, 893, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

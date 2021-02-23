@@ -1,0 +1,777 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26131,        767]
+NotebookOptionsPosition[     21363,        621]
+NotebookOutlinePosition[     23787,        688]
+CellTagsIndexPosition[     23667,        682]
+WindowTitle->RayleighJeans
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"PlanckRadiationLaw\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PlanckRadiationLaw"], "\<\"Gaussian\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/Gaussian"], "\<\"Planck\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/Planck"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/RayleighJeans\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/RayleighJeans"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/RayleighJeans.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$16364], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/RayleighJeans", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["RayleighJeans", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"RayleighJeans", "[", 
+       RowBox[{
+        StyleBox["t", "TI"], ",", 
+        StyleBox["f", "TI"]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]computes the Rayleigh-Jeans approximation at frequency \
+",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula"],
+     " for a temperature ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["T"]],"paclet:Global/ref/T"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->429108836],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Defined as: ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"T", " ", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", "k", " ", 
+       SuperscriptBox["\[Nu]", "2"]}], ")"}]}], 
+    SuperscriptBox["c", "2"]], TraditionalForm]], "InlineMath"]
+}], "Notes",
+ CellID->1067943069],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->385114025],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->75612485],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->257992499],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RayleighJeans", "[", 
+  RowBox[{"10", ",", 
+   RowBox[{"115", " ", 
+    SuperscriptBox["10", "9"]}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->512325701],
+
+Cell[BoxData["4.0631968932101825`*^-14"], "Output",
+ ImageSize->{87, 16},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->500298486]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LogLogPlot", "[", 
+  RowBox[{
+   RowBox[{"RayleighJeans", "[", 
+    RowBox[{"10", ",", "f"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"f", ",", 
+     SuperscriptBox["10", "10"], ",", 
+     SuperscriptBox["10", "13"]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->795972881],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 135}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 135},
+  PlotRange->{{0, 240}, {0, 135}}]], "Output",
+ ImageSize->{244, 135},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[3]=",
+ CellID->293893741]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LogLogPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"RayleighJeans", "[", 
+      RowBox[{"10", ",", "f"}], "]"}], ",", 
+     RowBox[{"Planck", "[", 
+      RowBox[{"10", ",", "f"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"f", ",", 
+     SuperscriptBox["10", "10"], ",", 
+     SuperscriptBox["10", "13"]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->465138080],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+M3m1BEKO2Wg/a0PMAfXscgSbfRTrBxGIN8YaMllbYQ6oZATag3xUFJoAD3pO
+2wY03iDEhsf9damOtePBeCnUHus+jmRPUB9XHJHuam6j8ek9IZnx889ioOdo
+IN8G463AgyCmwlrRCbgyBmHFVF+NGCkO1DMiEqhnRCT417PGqhn6ZjhTTO1n
+dKa/tEjbBj1zaVpN2jak/ZEZh3M9a66aoWfOPtmJql17SNsG6TPVk3jbQ9o2
+JPnIbLKdbz3LVs2I+L10EsrV7o58uQ3lrj2kbUOSZ4a8Ntqftg2aJzL5beQU
+ei8SKtb3bRcl3iDY5uFMsEF+4pLDdqacaZile6JIaewQKtA6N4l/bl5h9Q3F
+iZq7Nhsv311p6RCtE1ePsKw3nj4/VePjz7P962icFEM86SIa8e3c5gXlJMDq
+VbqW7/4qswenqGeLjae7J3UtHSKb7Ht172ax8dQGfeueaC504kA9g9G5uXrb
+wdJFNBa3I/6c7duL1B5Ao7Gcd1LP7O4p6tlq48luTp5X19IhkiiLOt4VPK+1
+xsttuJbKnU+6kKsDWLxs9YoY5Dhcz+KlqS5L+snm5O2Uf631nmjG6htoPCvj
+HYHy9yXZQgKyu6rlJfScaNrqG2g8Y+O5QnIn5V9XEn5pXrI0oVXk+bMiitN5
+ohmrb6DxrIznGBpoyS4ukbQM+ZP/eMG2d6v8bL0nmrP6BhrPyngEQRAEQRAE
+QZLxf+wcaFk=
+    "], {{0, 135}, {240, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{240, 135},
+  PlotRange->{{0, 240}, {0, 135}}]], "Output",
+ ImageSize->{244, 135},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[4]=",
+ CellID->292957395]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlanckRadiationLaw"]],"paclet:ref/PlanckRadiationLaw"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Gaussian"]],"paclet:LTE/ref/Gaussian"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Planck"]],"paclet:LTE/ref/Planck"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->329439643],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RayleighJeans",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 27.4824743}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Symbol", "language" -> "en", "paclet" -> "LTE", "status" -> "None",
+     "summary" -> 
+    "RayleighJeans[t, f] computes the Rayleigh-Jeans approximation at \
+frequency f for a temperature T.", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "RayleighJeans", "titlemodifier" -> "", "windowtitle" -> 
+    "RayleighJeans", "type" -> "Symbol", "uri" -> "LTE/ref/RayleighJeans"}, 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7442, 227, 387, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->385114025]},
+ "RasterizedOutput"->{
+  Cell[8911, 291, 3567, 66, 156, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->293893741],
+  Cell[12948, 378, 4934, 89, 156, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->292957395]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 23301, 668},
+ {"RasterizedOutput", 23444, 672}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 4614, 114, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5202, 137, 290, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[5517, 152, 744, 24, 83, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[6286, 180, 738, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->429108836],
+Cell[7027, 206, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7061, 208, 298, 11, 70, "Notes",
+ CellID->1067943069],
+Cell[7362, 221, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7442, 227, 387, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->385114025],
+Cell[CellGroupData[{
+Cell[7854, 246, 194, 6, 25, "ExampleSection",
+ CellID->75612485],
+Cell[8051, 254, 112, 3, 26, "Input",
+ CellID->257992499],
+Cell[CellGroupData[{
+Cell[8188, 261, 186, 6, 31, "Input",
+ CellID->512325701],
+Cell[8377, 269, 181, 5, 37, "Output",
+ CellID->500298486]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8595, 279, 313, 10, 31, "Input",
+ CellID->795972881],
+Cell[8911, 291, 3567, 66, 156, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->293893741]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12515, 362, 430, 14, 31, "Input",
+ CellID->465138080],
+Cell[12948, 378, 4934, 89, 156, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->292957395]
+}, Open  ]]
+}, Open  ]],
+Cell[17909, 471, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17977, 476, 270, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[18250, 490, 848, 25, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19135, 520, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[19410, 534, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[19444, 536, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[19665, 544, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[19907, 552, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19975, 557, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[20254, 571, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[20288, 573, 199, 6, 70, "MoreAbout",
+ CellID->329439643],
+Cell[20490, 581, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20558, 586, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[20841, 600, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[20875, 602, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[21088, 610, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[21336, 619, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

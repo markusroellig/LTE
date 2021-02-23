@@ -1,0 +1,546 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17276,        536]
+NotebookOptionsPosition[     13717,        427]
+NotebookOutlinePosition[     15738,        482]
+CellTagsIndexPosition[     15653,        477]
+WindowTitle->energyList
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"levelEnergy\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelEnergy"], "\<\"statisticalWeight\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/statisticalWeight"], "\<\"weightList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/weightList"], "\<\"transitionFrequency\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionFrequency"], "\<\"transitionEinsteinA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionEinsteinA"], "\<\"transitionUpperLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperLevel"], "\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/transitionLowerLevel"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/energyList\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/energyList"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/energyList.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$5335], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "LTE/ref/energyList",
+              ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["energyList", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"energyList", "[", 
+       StyleBox["s", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]returns the list of all level energies (in K) of \
+species ",
+     Cell[BoxData[
+      StyleBox["s", "TI"]], "InlineFormula"],
+     ".  "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->214442552],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->240063977],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->84877539],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"energyList", "[", "\"\<CO\>\"", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->241490298],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "5.532421825899282`", ",", "16.59705484460432`", ",", 
+   "33.19347573669065`", ",", "55.32104711798562`", ",", "82.97893057553958`",
+    ",", "116.16607226906477`", ",", "154.8811768460432`", ",", 
+   "199.12278429208635`", ",", "248.88924797697845`", ",", 
+   "304.17860291798564`", ",", "364.98871947338137`", ",", 
+   "431.31735822302164`", ",", "503.1618845553957`", ",", 
+   "580.5196858143886`", ",", "663.387688286331`", ",", "751.7627304402879`", 
+   ",", "845.6414751007195`", ",", "945.0204094532374`", ",", 
+   "1049.895493761151`", ",", "1160.2629517482014`", ",", 
+   "1276.1184802158275`", ",", "1397.4577759669066`", ",", 
+   "1524.2760088805758`", ",", "1656.5682610158274`", ",", 
+   "1794.3297900748203`", ",", "1937.5549755510795`", ",", 
+   "2086.2385482244604`", ",", "2240.374887589928`", ",", 
+   "2399.9580218633096`", ",", "2564.981803620144`", ",", 
+   "2735.439909791367`", ",", "2911.325841670504`", ",", "3092.632573628777`",
+    ",", "3279.354133880576`", ",", "3471.4822673107915`", ",", 
+   "3669.0099482906476`", ",", "3871.9301511913673`", ",", 
+   "4080.2340939741007`", ",", "4293.914751011511`", ",", 
+   "4512.963340264749`", ",", "4737.372133542446`", ",", "4967.13129496403`", 
+   ",", "5202.233447617267`", ",", "5442.669106902159`", ",", 
+   "5688.42843693813`", ",", "5939.503006969785`", ",", "6195.882278552519`", 
+   ",", "6457.556767086332`", ",", "6724.516636690648`", ",", 
+   "6996.751348920864`", ",", "7274.250365332375`", ",", 
+   "7557.0045526071945`", ",", "7844.999859487771`", ",", 
+   "8138.227855215829`", ",", "8436.677298785613`", ",", "8740.335544064748`",
+    ",", "9049.190647482015`", ",", "9363.232773156837`", ",", 
+   "9682.447869828778`", ",", "10006.824696492087`", ",", 
+   "10336.35060701439`", ",", "10671.012955260432`", ",", 
+   "11010.796987410073`", ",", "11355.693570143887`", ",", 
+   "11705.68584195108`", ",", "12060.761859263312`", ",", 
+   "12420.908273381296`", ",", "12786.111735611512`", ",", 
+   "13156.355384443168`", ",", "13531.627978866189`", ",", 
+   "13911.914062500722`", ",", "14297.198178956836`", ",", 
+   "14687.464871853239`", ",", "15082.70149505324`", ",", 
+   "15482.891187050362`", ",", "15888.019896582735`", ",", 
+   "16298.07076214101`", ",", "16713.028327338132`", ",", 
+   "17132.878540917987`", ",", "17557.60032598849`"}], "}"}]], "Output",
+ ImageSize->{565, 143},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->312320132]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"energyList", "[", "\"\<O\>\"", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->623222488],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", "227.72480719424465`", ",", "326.5974808633094`"}], 
+  "}"}]], "Output",
+ ImageSize->{152, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->567783865]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"energyList", "[", "\"\<C+\>\"", "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->49293033],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "91.21595251798561`", ",", "61875.23884892087`", ",", 
+   "61906.884892086346`", ",", "61947.57985611512`", ",", 
+   "107813.05611510792`", ",", "107816.70215827339`", ",", 
+   "138839.8949640288`"}], "}"}]], "Output",
+ ImageSize->{457, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->609716922]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelEnergy"]],"paclet:LTE/ref/levelEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["statisticalWeight"]],"paclet:LTE/ref/statisticalWeight"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["weightList"]],"paclet:LTE/ref/weightList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionFrequency"]],"paclet:LTE/ref/transitionFrequency"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionEinsteinA"]],"paclet:LTE/ref/transitionEinsteinA"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperLevel"]],"paclet:LTE/ref/transitionUpperLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->192862224],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LAMBDA - Leiden Atomic and Molecular Database"]],
+    "http://home.strw.leidenuniv.nl/~moldata/"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ " "
+}], "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"energyList",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 49, 54.9307878}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "L T E Symbol", "language" -> "en", "paclet" -> "LTE", 
+    "status" -> "None", "summary" -> 
+    "energyList[s] returns the list of all level energies (in K) of species \
+s. ", "synonyms" -> {}, "tabletags" -> {}, "title" -> "energyList", 
+    "titlemodifier" -> "", "windowtitle" -> "energyList", "type" -> "Symbol", 
+    "uri" -> "LTE/ref/energyList"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5580, 157, 387, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->214442552]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 15510, 470}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 4184, 101, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4769, 124, 287, 11, 44, "ObjectNameGrid"],
+Cell[5059, 137, 496, 16, 82, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5580, 157, 387, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->214442552],
+Cell[CellGroupData[{
+Cell[5992, 176, 195, 6, 25, "ExampleSection",
+ CellID->240063977],
+Cell[6190, 184, 111, 3, 26, "Input",
+ CellID->84877539],
+Cell[CellGroupData[{
+Cell[6326, 191, 115, 3, 26, "Input",
+ CellID->241490298],
+Cell[6444, 196, 2537, 44, 164, "Output",
+ CellID->312320132]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9018, 245, 114, 3, 26, "Input",
+ CellID->623222488],
+Cell[9135, 250, 254, 8, 35, "Output",
+ CellID->567783865]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9426, 263, 114, 3, 26, "Input",
+ CellID->49293033],
+Cell[9543, 268, 403, 11, 35, "Output",
+ CellID->609716922]
+}, Open  ]]
+}, Open  ]],
+Cell[9973, 283, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10041, 288, 270, 12, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[10314, 302, 2164, 61, 75, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12515, 368, 276, 12, 30, "MoreAboutSection",
+ CellID->38303248],
+Cell[12794, 382, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[12828, 384, 199, 6, 70, "MoreAbout",
+ CellID->192862224],
+Cell[13030, 392, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13098, 397, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[13381, 411, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13415, 413, 260, 9, 70, "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+Cell[13690, 425, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

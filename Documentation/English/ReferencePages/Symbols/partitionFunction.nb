@@ -1,0 +1,685 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19113,        675]
+NotebookOptionsPosition[     13934,        513]
+NotebookOutlinePosition[     16115,        572]
+CellTagsIndexPosition[     16030,        567]
+WindowTitle->partitionFunction
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/partitionFunction\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/partitionFunction"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/\
+partitionFunction.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$14195], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/partitionFunction", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["partitionFunction", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"partitionFunction", "[", 
+       RowBox[{
+        StyleBox["s", "TI"], ",", 
+        StyleBox["t", "TI"]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]computes the partition function of species ",
+     Cell[BoxData[
+      StyleBox["s", "TI"]], "InlineFormula"],
+     " at kinetic temperature ",
+     Cell[BoxData[
+      StyleBox["t", "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->4878636],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "The partition function of a system with n energy levels with energies ",
+ Cell[BoxData[
+  SubscriptBox["E", "i"]], "InlineFormula"],
+ " and statistical weight ",
+ Cell[BoxData[
+  SubscriptBox["g", "i"]], "InlineFormula"],
+ " is defined as: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Q", "(", "T", ")"}], "\[LongEqual]", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "n"], 
+     RowBox[{
+      SubscriptBox["g", "i"], " ", 
+      RowBox[{"exp", "(", 
+       RowBox[{"-", 
+        SubscriptBox["E", "i"]}], ")"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ " "
+}], "Notes",
+ CellID->1067943069],
+
+Cell[TextData[{
+ Cell[BoxData["partitionFunction"], "InlineFormula"],
+ " uses ",
+ Cell[BoxData[
+  StyleBox["lamdaData", "TI"]], "InlineFormula"],
+ " to query the level information. "
+}], "Notes",
+ CellID->70269415],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->256866255],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->327790195],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->773503600],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"partitionFunction", "[", 
+  RowBox[{"\"\<CO\>\"", ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->347015327],
+
+Cell[BoxData["3.967935068081453`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->320275030]
+}, Open  ]],
+
+Cell["\<\
+The partition function is a function of the considered levels. Make sure that \
+all relevantly populated energy levels are included:\
+\>", "ExampleText",
+ CellID->69496375],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"energies", "=", 
+  RowBox[{
+   RowBox[{"energyList", "[", "\"\<CO\>\"", "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ";;", "10"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"weights", "=", 
+  RowBox[{
+   RowBox[{"weightList", "[", "\"\<CO\>\"", "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ";;", "10"}], "]"}], "]"}]}]}], "Input",
+ CellLabel->"In[3]:=",
+ CellID->633937248],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "5.532421825899282`", ",", "16.59705484460432`", ",", 
+   "33.19347573669065`", ",", "55.32104711798562`", ",", "82.97893057553958`",
+    ",", "116.16607226906477`", ",", "154.8811768460432`", ",", 
+   "199.12278429208635`", ",", "248.88924797697845`"}], "}"}]], "Output",
+ ImageSize->{565, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->96718004],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1.`", ",", "3.`", ",", "5.`", ",", "7.`", ",", "9.`", ",", "11.`", ",", 
+   "13.`", ",", "15.`", ",", "17.`", ",", "19.`"}], "}"}]], "Output",
+ ImageSize->{292, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->273657433]
+}, Open  ]],
+
+Cell["\<\
+Compare the partition function of the first 10 levels of CO at 10K:\
+\>", "ExampleText",
+ CellID->53869628],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"weights", ".", 
+  RowBox[{"Exp", "[", 
+   RowBox[{"-", 
+    FractionBox["energies", "10."]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->198574054],
+
+Cell[BoxData["3.9679350680801564`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->595841483]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"partitionFunction", "[", 
+   RowBox[{"\"\<CO\>\"", ",", "10"}], "]"}], "-", "%"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->567725744],
+
+Cell[BoxData["1.2967404927621828`*^-12"], "Output",
+ ImageSize->{94, 16},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->457869840]
+}, Open  ]],
+
+Cell["\<\
+This is very accurate, since only the first few levels are populatedf at 10 K.\
+\>", "ExampleText",
+ CellID->568021075],
+
+Cell["\<\
+Compare the partition function of the first 10 levels of CO at 10K:\
+\>", "ExampleText",
+ CellID->431801536],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"weights", ".", 
+  RowBox[{"Exp", "[", 
+   RowBox[{"-", 
+    FractionBox["energies", "100."]}], "]"}]}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->57568703],
+
+Cell[BoxData["34.224155735087564`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->631239859]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"partitionFunction", "[", 
+   RowBox[{"\"\<CO\>\"", ",", "100"}], "]"}], "-", "%"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->731455296],
+
+Cell[BoxData["2.269660775528891`"], "Output",
+ ImageSize->{53, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->241103212]
+}, Open  ]],
+
+Cell["Now we are less accurate because we miss populated levels.", \
+"ExampleText",
+ CellID->181891071]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->896983509],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"partitionFunction",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 21.2519765}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Symbol", "language" -> "en", "paclet" -> "LTE", "status" -> "None",
+     "summary" -> 
+    "partitionFunction[s, t] computes the partition function of species s at \
+kinetic temperature t.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "partitionFunction", "titlemodifier" -> "", "windowtitle" -> 
+    "partitionFunction", "type" -> "Symbol", "uri" -> 
+    "LTE/ref/partitionFunction"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7085, 222, 387, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->256866255]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 15887, 560}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 3783, 92, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4375, 115, 294, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[4694, 130, 637, 20, 82, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5356, 154, 736, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->4878636],
+Cell[6095, 180, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6129, 182, 656, 23, 70, "Notes",
+ CellID->1067943069],
+Cell[6788, 207, 214, 7, 70, "Notes",
+ CellID->70269415],
+Cell[7005, 216, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7085, 222, 387, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->256866255],
+Cell[CellGroupData[{
+Cell[7497, 241, 195, 6, 25, "ExampleSection",
+ CellID->327790195],
+Cell[7695, 249, 112, 3, 26, "Input",
+ CellID->773503600],
+Cell[CellGroupData[{
+Cell[7832, 256, 146, 4, 26, "Input",
+ CellID->347015327],
+Cell[7981, 262, 175, 5, 35, "Output",
+ CellID->320275030]
+}, Open  ]],
+Cell[8171, 270, 182, 4, 47, "ExampleText",
+ CellID->69496375],
+Cell[CellGroupData[{
+Cell[8378, 278, 409, 12, 43, "Input",
+ CellID->633937248],
+Cell[8790, 292, 456, 11, 35, "Output",
+ CellID->96718004],
+Cell[9249, 305, 316, 9, 35, "Output",
+ CellID->273657433]
+}, Open  ]],
+Cell[9580, 317, 117, 3, 33, "ExampleText",
+ CellID->53869628],
+Cell[CellGroupData[{
+Cell[9722, 324, 179, 6, 45, "Input",
+ CellID->198574054],
+Cell[9904, 332, 176, 5, 35, "Output",
+ CellID->595841483]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10117, 342, 170, 5, 26, "Input",
+ CellID->567725744],
+Cell[10290, 349, 181, 5, 37, "Output",
+ CellID->457869840]
+}, Open  ]],
+Cell[10486, 357, 129, 3, 33, "ExampleText",
+ CellID->568021075],
+Cell[10618, 362, 118, 3, 33, "ExampleText",
+ CellID->431801536],
+Cell[CellGroupData[{
+Cell[10761, 369, 179, 6, 70, "Input",
+ CellID->57568703],
+Cell[10943, 377, 176, 5, 35, "Output",
+ CellID->631239859]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11156, 387, 171, 5, 70, "Input",
+ CellID->731455296],
+Cell[11330, 394, 175, 5, 35, "Output",
+ CellID->241103212]
+}, Open  ]],
+Cell[11520, 402, 103, 2, 70, "ExampleText",
+ CellID->181891071]
+}, Open  ]],
+Cell[11638, 407, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11706, 412, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[11981, 426, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[12015, 428, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[12236, 436, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[12478, 444, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12546, 449, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[12825, 463, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[12859, 465, 199, 6, 70, "MoreAbout",
+ CellID->896983509],
+Cell[13061, 473, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13129, 478, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[13412, 492, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13446, 494, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[13659, 502, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[13907, 511, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,669 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19468,        659]
+NotebookOptionsPosition[     14915,        522]
+NotebookOutlinePosition[     17164,        582]
+CellTagsIndexPosition[     17079,        577]
+WindowTitle->KelvinKmsec2Erg
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["L T E SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"FromRayleighTemperature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/FromRayleighTemperature"], \
+"\<\"ToRayleighTemperature\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/ToRayleighTemperature"], "\<\"Erg2Kelvin\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2Kelvin"], "\<\"Erg2KelvinKmsec\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Erg2KelvinKmsec"], "\<\"Kelvin2Erg\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/Kelvin2Erg"], "\<\"wavenumberToKelvin\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/wavenumberToKelvin"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer\"\>":>
+       Documentation`HelpLookup["paclet:LTE/guide/LTE - Radiative Transfer"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE/ref/KelvinKmsec2Erg\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["LTE/ref/KelvinKmsec2Erg"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/LTE/ref/\
+KelvinKmsec2Erg.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$9888], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "LTE/ref/KelvinKmsec2Erg", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["KelvinKmsec2Erg", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"KelvinKmsec2Erg", "[", 
+       RowBox[{
+        StyleBox["f", "TI"], ",", 
+        TemplateBox[{Cell[
+           TextData["T"]],"paclet:ref/T"},
+         "RefLink",
+         BaseStyle->{"InlineFormula"}]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]converts  Rayleigh-Jeans equivalent temperature \
+integrals ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["T"]],"paclet:Global/ref/T"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula"],
+     " in K km/s to line-integrated specific intensities at frequency ",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula"],
+     " in ",
+     Cell[BoxData[
+      RowBox[{"erg", " ", 
+       SuperscriptBox["s", 
+        RowBox[{"-", "1"}]], " ", 
+       SuperscriptBox["cm", 
+        RowBox[{"-", "1"}]], 
+       SuperscriptBox["sr", 
+        RowBox[{"-", "1"}]]}]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->204577606],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell["Spectroscopic unit conversion.", "Notes",
+ CellID->1067943069],
+
+Cell[TextData[{
+ "Definition:  ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     SubscriptBox["I", "\[Nu]"], "d\[Nu]"}]}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", " ", 
+      SubscriptBox["k", "B"], 
+      SuperscriptBox["\[Nu]", "3"]}], 
+     RowBox[{
+      SuperscriptBox["c", "3"], "\[Times]", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "5"}]]}]], 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      SubscriptBox["T", "b"], "dv"}]}]}]}]], "InlineFormula"]
+}], "Notes",
+ CellID->768261143],
+
+Cell[TextData[{
+ "The factor ",
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "5"}]]], "InlineFormula"],
+ " converts on cm/s (from the speed of light c) to the desired km/s in the \
+output."
+}], "Notes",
+ CellID->178287591],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->90018394],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->552177884],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->392939054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"KelvinKmsec2Erg", "[", 
+  RowBox[{
+   RowBox[{"115", " ", 
+    SuperscriptBox["10", "9"]}], ",", "100"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->45570800],
+
+Cell[BoxData["1.5586461159133545`*^-7"], "Output",
+ ImageSize->{89, 16},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->293254224]
+}, Open  ]],
+
+Cell["\<\
+The strong frequency dependence makes an intuitive understanding of the two \
+scales difficult:\
+\>", "ExampleText",
+ CellID->747405628],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"KelvinKmsec2Erg", "[", 
+  RowBox[{
+   RowBox[{"1900", " ", 
+    SuperscriptBox["10", "9"]}], ",", "100"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->257152835],
+
+Cell[BoxData["0.000702934410063266`"], "Output",
+ ImageSize->{81, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->287053674]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FromRayleighTemperature"]],
+    "paclet:LTE/ref/FromRayleighTemperature"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ToRayleighTemperature"]],
+    "paclet:LTE/ref/ToRayleighTemperature"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2Kelvin"]],"paclet:LTE/ref/Erg2Kelvin"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Erg2KelvinKmsec"]],"paclet:LTE/ref/Erg2KelvinKmsec"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Kelvin2Erg"]],"paclet:LTE/ref/Kelvin2Erg"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["wavenumberToKelvin"]],"paclet:LTE/ref/wavenumberToKelvin"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->94152998],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"KelvinKmsec2Erg",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:LTE/guide/LTE", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 7.9950387}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "LTE`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "L T E Symbol", "language" -> "en", "paclet" -> "LTE", "status" -> "None",
+     "summary" -> 
+    "KelvinKmsec2Erg[f, T] converts Rayleigh-Jeans equivalent temperature \
+integrals T in K km/s to line-integrated specific intensities at frequency f \
+in erg s -1 cm -1 sr -1.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "KelvinKmsec2Erg", "titlemodifier" -> "", "windowtitle" -> 
+    "KelvinKmsec2Erg", "type" -> "Symbol", "uri" -> 
+    "LTE/ref/KelvinKmsec2Erg"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8759, 268, 386, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->90018394]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 16937, 570}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 4977, 121, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5567, 144, 292, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[5884, 159, 1155, 36, 101, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[7064, 199, 738, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->204577606],
+Cell[7805, 225, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7839, 227, 68, 1, 70, "Notes",
+ CellID->1067943069],
+Cell[7910, 230, 531, 20, 70, "Notes",
+ CellID->768261143],
+Cell[8444, 252, 232, 8, 70, "Notes",
+ CellID->178287591],
+Cell[8679, 262, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8759, 268, 386, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->90018394],
+Cell[CellGroupData[{
+Cell[9170, 287, 195, 6, 25, "ExampleSection",
+ CellID->552177884],
+Cell[9368, 295, 112, 3, 26, "Input",
+ CellID->392939054],
+Cell[CellGroupData[{
+Cell[9505, 302, 188, 6, 31, "Input",
+ CellID->45570800],
+Cell[9696, 310, 180, 5, 37, "Output",
+ CellID->293254224]
+}, Open  ]],
+Cell[9891, 318, 146, 4, 33, "ExampleText",
+ CellID->747405628],
+Cell[CellGroupData[{
+Cell[10062, 326, 190, 6, 31, "Input",
+ CellID->257152835],
+Cell[10255, 334, 178, 5, 35, "Output",
+ CellID->287053674]
+}, Open  ]]
+}, Open  ]],
+Cell[10460, 343, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10528, 348, 270, 12, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[10801, 362, 1850, 54, 75, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12688, 421, 272, 12, 30, "TutorialsSection",
+ CellID->250839057],
+Cell[12963, 435, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[12997, 437, 218, 6, 20, "Tutorials",
+ CellID->341631938],
+Cell[13218, 445, 239, 6, 20, "Tutorials",
+ CellID->62236461],
+Cell[13460, 453, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13528, 458, 276, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[13807, 472, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13841, 474, 198, 6, 70, "MoreAbout",
+ CellID->94152998],
+Cell[14042, 482, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14110, 487, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[14393, 501, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[14427, 503, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[14640, 511, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[14888, 520, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

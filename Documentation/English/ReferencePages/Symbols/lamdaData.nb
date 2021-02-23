@@ -1,0 +1,3891 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    144856,       3881]
+NotebookOptionsPosition[    138916,       3693]
+NotebookOutlinePosition[    141054,       3750]
+CellTagsIndexPosition[    140967,       3745]
+WindowTitle->lamdaData
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["K O S M A SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"LTE - Radiative Transfer Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Radiative Transfer Package"], "\<\"LTE - \
+Advanced Radiative Transfer Modelling\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"transitionLowerLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionLowerLevel"], "\<\"transitionUpperLevel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperLevel"], \
+"\<\"transitionUpperEnergy\"\>":>Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionUpperEnergy"], "\<\"transitionFrequency\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionFrequency"], "\<\"transitionEinsteinA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/transitionEinsteinA"], "\<\"frequencyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/frequencyList"], "\<\"einsteinAList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/einsteinAList"], "\<\"levelEnergy\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/levelEnergy"], "\<\"energyList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/energyList"], "\<\"statisticalWeight\"\>":>
+       Documentation`HelpLookup[
+       "paclet:LTE/ref/statisticalWeight"], "\<\"weightList\"\>":>
+       Documentation`HelpLookup["paclet:LTE/ref/weightList"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"KOSMA/ref/lambdaData\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["KOSMA/ref/lambdaData"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/KOSMA/ref/lambdaData.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$10652], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "KOSMA/ref/lambdaData", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["lamdaData", "ObjectName"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8]]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"lamdaData", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]is a Dataset composed of the information available at \
+the LAMDA Leiden database."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->82189101],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell["\<\
+The aim of the LAMDA project is to provide users of radiative transfer codes \
+with the basic atomic and molecular data needed for their excitation \
+calculations. Line data of a number of astrophysically interesting species \
+are summarized, including energy levels, statistical weights, Einstein \
+A-coefficients and collisional rate coefficients. Available collisional data \
+from quantum chemical calculations and experiments are in some cases \
+extrapolated to higher energies.\
+\>", "Notes",
+ CellID->1067943069],
+
+Cell["\<\
+If you use the data files in your work please refer to the publication by Sch\
+\[ODoubleDot]ier, F.L., van der Tak, F.F.S., van Dishoeck E.F., Black, J.H. \
+2005, A&A 432, 369-379 introducing this data base. When individual molecules \
+are considered, references to the original papers providing the spectroscopic \
+and collisional data are encouraged.\
+\>", "Notes",
+ CellID->286157641],
+
+Cell["Each entry has the following Keys:", "Notes",
+ CellID->608171575],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<MolecularWeight\>\"", Cell[
+    "molecular weight of the species", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<QuantumNumbers\>\"", Cell[
+    "quantum numbers identifying the individual levels", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Collisions\>\"", Cell["\<\
+collision available in the database (not yet part of the Dataset)\
+\>", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Levels\>\"", Cell[
+    "an Association containing all energy levels", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Transitions\>\"", Cell[
+    "an Association containing all energy transitions", "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True, True, True}}}},
+ CellID->241706258],
+
+Cell["Each \"Levels\" data contains the following Keys:", "Notes",
+ CellID->542093978],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<Energy\>\"", Cell[
+    "level energy", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<EnergyUnit\>\"", Cell[TextData[{
+     "elevel energy unit (usually ",
+     Cell[BoxData[
+      SuperscriptBox["cm", 
+       RowBox[{"-", "1"}]]], "InlineFormula"],
+     ")"
+    }], "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Weight\>\"", Cell[
+    "statistical weight ofthe level", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{"quantum", " ", "number"}], Cell["\<\
+the quantum numbers of each level (Key is the value of the top key \
+\"QuantumNumbers\"\
+\>", "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True, True}}}},
+ CellID->281532028],
+
+Cell["Each \"Transitions\" data contains the following Keys:", "Notes",
+ CellID->45827942],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<UpperLevel\>\"", Cell[
+    "number of the upper energy level", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<LowerLevel\>\"", Cell[
+    "number of the lower energy level", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<EinsteinA\>\"", Cell[
+    "Einstein A value of tha transition", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Frequency\>\"", Cell[
+    "transition frequency", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<FrequencyUnit\>\"", Cell[
+    "transition frequency unit (usually GHz)", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<EnergyUpper\>\"", Cell[
+    "energy of the upper level", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<EnergyUnit\>\"", Cell[
+    "energy unit (usually K)", "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, None, None, None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{
+  "Rows" -> {{True, True, True, True, True, True, True, True}}}},
+ CellID->674407492],
+
+Cell["The values associated with units are stored as Quantity.", "Notes",
+ CellID->43373842],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->270660069],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1858605],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LTE`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->430657907],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["lamdaData"], "Input",
+ CellLabel->"In[2]:=",
+ CellID->383819211],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"MolecularWeight\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"QuantumNumbers\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"Collisions\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"Levels\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"Transitions\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[
+        StyleBox["\"13C16O\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"29.\"", 29., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "40"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"6.294\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 6.294*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "110.2013542798`", "\"GHz\"", "gigahertz", 
+                    "\"Gigahertz\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "39"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"13CS\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"45.1\"", 45.1, AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "9"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "40"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"1.471\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-6\""]}], 1.4712*^-6, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "46.2475632`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "39"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"CH3OH\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"32.\"", 32., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J_k_v\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "10"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "303"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 169}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 168}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"1.496\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-13\""]}], 1.496*^-13, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.577542`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "743"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"C17O\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"29.\"", 29., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "40"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"6.697\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 6.697*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "112.3592837`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "39"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"C18O\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"30.\"", 30., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "7"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "40"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"6.266\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 6.266*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "109.7821734`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "39"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"C\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"12.\"", 12., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "65"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "14"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "2"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"7.88\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 7.88*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "492.160651`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "2"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"C+\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"12.\"", 12., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "41"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "12"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"2.\"", 2., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "7"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"2.3\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-6\""]}], 2.3*^-6, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "1900.5369`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "13"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"CH+\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"13.\"", 13., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "9"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "10"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.006364\"", 0.0063636, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "40.08023`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "9"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"CO\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"28.\"", 28., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "12"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "12"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "80"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"7.203\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 7.203*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "115.2711912`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "79"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"CS\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"44.1\"", 44.1, AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "9"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "40"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"1.749\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-6\""]}], 1.7491*^-6, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "48.9909549`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "39"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"E-CH3OH\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"32.\"", 32., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"K\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "10"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "9.122`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "99"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.0000147\"", 0.0000147, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "108.89394`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "504"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"H13CN\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"28.\"", 28., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "16"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "29"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.00002226\"", 0.000022256, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "86.33986`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "28"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"H13CO+\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"30.\"", 30., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "9"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "30"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.00003853\"", 0.000038534, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "86.7542884`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "29"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"HC18O+\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"31.\"", 31., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "9"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "30"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.00003676\"", 0.000036756, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "85.162157`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "29"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"HC3N\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"51.\"", 51., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "10"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "20"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"4.069\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 4.069*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "9.09810212`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "19"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox[
+        StyleBox["\"HCl\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"36.5\"", 36.5, AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       StyleBox["\"J,F\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "13"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"4.\"", 4., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "27"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                   "\"0.001169\"", 0.001169, AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "625.901603`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "55"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       ItemBox[
+        UnderscriptBox["\[VerticalEllipsis]", 
+         StyleBox["24", 
+          GrayLevel[0.5]]], Alignment -> {Center, Bottom}, Background -> 
+        RGBColor[0.985, 0.98, 0.973]], "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}, {
+       ItemBox[
+        RowBox[{"4 levels", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"40", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{1763, 556},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->673208203]
+}, Open  ]],
+
+Cell["To get a list of all species contained in the Dataset:", "ExampleText",
+ CellID->452475439],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lamdaData", "[", "Keys", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->149644117],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{StyleBox[
+     StyleBox[
+      GridBox[{{
+         RowBox[{"{", "\[ThinSpace]", 
+           StyleBox["\"13C16O\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"13CS\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"CH3OH\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"C17O\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"C18O\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"C\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"C+\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"CH+\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"CO\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"CS\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"E-CH3OH\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"H13CN\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox["\"H13CO+\"", FontColor -> GrayLevel[0.4]], ",", 
+           StyleBox[
+            SubscriptBox["\[CenterEllipsis]", "27"], 
+            GrayLevel[0.5]], "\[ThinSpace]", "}"}]}, {
+         ItemBox[
+          RowBox[{"1 level", 
+            AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+            RowBox[{"40", "elements"}]}], 
+          BaseStyle -> {
+           FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+            GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+          ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+          Background -> RGBColor[0.92, 0.92, 0.9]]}}, 
+       GridBoxAlignment -> {{{Left}}}, 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+       GridBoxSpacings -> {"Rows" -> {{0, 0}}, "Columns" -> {{0}}}, 
+       GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+       FrameStyle -> RGBColor[0, 0, 0, 0.4], 
+       GridFrameMargins -> {{2, 1}, {0, 2}}], LineBreakWithin -> Automatic], 
+     SpanMinSize -> 1.3],"Dataset[{__String}]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{548, 43},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->97426288]
+}, Open  ]],
+
+Cell["To access individual species use respective key:", "ExampleText",
+ CellID->410780979],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lamdaData", "[", "\"\<CO\>\"", "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->44417942],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox["\"MolecularWeight\"", 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"28.\"", 28., AutoDelete -> True], 
+        NumberForm[#, 4]& ]}, {
+       StyleBox["\"QuantumNumbers\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"Collisions\"", 
+        GrayLevel[0.3]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "12"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox[2, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             RowBox[{"{", 
+               StyleBox[
+                SubscriptBox["\[CenterEllipsis]", "12"], 
+                GrayLevel[0.5]], "}"}]}], SpanMinSize -> 1], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox["\"Levels\"", 
+        GrayLevel[0.3]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"Energy\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "0.`", "\"wavenumbers\"", "wavenumbers", 
+                    "\"Wavenumbers\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
+                RowBox[{
+                  StyleBox["\"EnergyUnit\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]]}], 
+                ",", 
+                RowBox[{
+                  StyleBox["\"Weight\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+                   NumberForm[#, 4]& ]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "1"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "80"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       StyleBox["\"Transitions\"", 
+        GrayLevel[0.3]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          StyleBox[
+           RowBox[{
+             StyleBox[1, 
+              GrayLevel[0.3]], 
+             StyleBox["\[Rule]", 
+              GrayLevel[0.5]], 
+             StyleBox[
+              RowBox[{
+                StyleBox["\[LeftAssociation]", 
+                 GrayLevel[0.45]], "\[ThinSpace]", 
+                RowBox[{
+                  StyleBox["\"UpperLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 2}], ",", 
+                RowBox[{
+                  StyleBox["\"LowerLevel\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 1}], ",", 
+                RowBox[{
+                  StyleBox["\"EinsteinA\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  TagBox[
+                   InterpretationBox[
+                    RowBox[{"\"7.203\"", "\[Times]", 
+                    SuperscriptBox["10", "\"-8\""]}], 7.203*^-8, AutoDelete -> 
+                    True], NumberForm[#, 4]& ]}], ",", 
+                RowBox[{
+                  StyleBox["\"Frequency\"", 
+                   GrayLevel[0.3]], 
+                  StyleBox["\[Rule]", 
+                   GrayLevel[0.5]], 
+                  
+                  TemplateBox[{
+                   "115.2711912`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+                   "Quantity", SyntaxForm -> Mod]}], ",", 
+                StyleBox[
+                 SubscriptBox["\[CenterEllipsis]", "3"], 
+                 GrayLevel[0.5]], "\[ThinSpace]", 
+                StyleBox["\[RightAssociation]", 
+                 GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}], 
+           SpanMinSize -> 1], ",", 
+          StyleBox[
+           SubscriptBox["\[CenterEllipsis]", "79"], 
+           GrayLevel[0.5]], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       ItemBox[
+        RowBox[{"3 levels", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"5", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[<|\"MolecularWeight\" -> _, \"QuantumNumbers\" -> _, \
+\"Collisions\" -> _, \"Levels\" -> _, \"Transitions\" -> _|>]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{779, 150},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->288386262]
+}, Open  ]],
+
+Cell["Usually we are interested in parts of the dataset:", "ExampleText",
+ CellID->6175921],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lamdaData", "[", 
+  RowBox[{"\"\<O\>\"", ",", "\"\<Levels\>\""}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->140446240],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"Energy\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"EnergyUnit\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"Weight\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"N_J\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J_K-_K+\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"N,K,inv-sym\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J,K,+/-\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J_K+_K-\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J_Kp_Ko\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"numbers)\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"K_c\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J,K,inv-sym\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"e-state\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"2S+1_L_J\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J+0.5_Omega+0.5_Lambda_F\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J_F1_F\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J,F\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"K\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"J_k_v\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[1, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "0.`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod], 
+       StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]], 
+       TagBox[
+        InterpretationBox["\"5.\"", 5., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N_J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K-_K+"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,+/-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K+_K-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_Kp_Ko"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "numbers)"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K_c"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "e-state"]], 
+       StyleBox["\"3_P_2\"", FontColor -> GrayLevel[0.4]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J+0.5_Omega+0.5_Lambda_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_F1_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_k_v"]]}, {
+       StyleBox[2, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "158.268741`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod], 
+       StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]], 
+       TagBox[
+        InterpretationBox["\"3.\"", 3., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N_J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K-_K+"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,+/-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K+_K-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_Kp_Ko"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "numbers)"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K_c"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "e-state"]], 
+       StyleBox["\"3_P_1\"", FontColor -> GrayLevel[0.4]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J+0.5_Omega+0.5_Lambda_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_F1_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_k_v"]]}, {
+       StyleBox[3, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "226.9852492`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod], 
+       StyleBox["\"Wavenumbers\"", FontColor -> GrayLevel[0.4]], 
+       TagBox[
+        InterpretationBox["\"1.\"", 1., AutoDelete -> True], 
+        NumberForm[#, 4]& ], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N_J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K-_K+"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "N,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,+/-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_K+_K-"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_Kp_Ko"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "numbers)"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K_c"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,K,inv-sym"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "e-state"]], 
+       StyleBox["\"3_P_0\"", FontColor -> GrayLevel[0.4]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J+0.5_Omega+0.5_Lambda_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_F1_F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J,F"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "K"]], 
+       InterpretationBox[
+        StyleBox[
+        "KeyAbsent", FontFamily -> "Arial", FontSize -> 11, FontWeight -> 
+         Bold, 
+         GrayLevel[0.7]], 
+        Missing["KeyAbsent", "J_k_v"]]}, {
+       ItemBox[
+        RowBox[{"2 levels", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"3", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_Integer -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{1862, 146},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->72550588]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lamdaData", "[", 
+  RowBox[{
+  "\"\<O\>\"", ",", "\"\<Levels\>\"", ",", "All", ",", "\"\<Energy\>\""}], 
+  "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->737967140],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[1, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "0.`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod]}, {
+       StyleBox[2, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "158.268741`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod]}, {
+       StyleBox[3, 
+        GrayLevel[0.3]], 
+       TemplateBox[{
+        "226.9852492`", "\"wavenumbers\"", "wavenumbers", "\"Wavenumbers\""}, 
+        "Quantity", SyntaxForm -> Mod]}, {
+       ItemBox[
+        RowBox[{"1 level", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"3", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_Integer -> Quantity[_, \"Wavenumbers\"])..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{190, 111},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->24635853]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QuantityMagnitude", "[", "#", "]"}], "&"}], "/@", 
+  RowBox[{"lamdaData", "[", 
+   RowBox[{
+   "\"\<O\>\"", ",", "\"\<Levels\>\"", ",", "All", ",", "\"\<Energy\>\""}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->67079024],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[1, 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"0.\"", 0., AutoDelete -> True], 
+        NumberForm[#, 4]& ]}, {
+       StyleBox[2, 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"158.3\"", 158.268741, AutoDelete -> True], 
+        NumberForm[#, 4]& ]}, {
+       StyleBox[3, 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox["\"227.\"", 226.9852492, AutoDelete -> True], 
+        NumberForm[#, 4]& ]}, {
+       ItemBox[
+        RowBox[{"1 level", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"3", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_Integer -> _Real)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{127, 90},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->87691396]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lamdaData", "[", 
+  RowBox[{"\"\<CO\>\"", ",", "\"\<Transitions\>\"", ",", "2"}], 
+  "]"}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->426215437],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox["\"UpperLevel\"", 
+        GrayLevel[0.3]], 3}, {
+       StyleBox["\"LowerLevel\"", 
+        GrayLevel[0.3]], 2}, {
+       StyleBox["\"EinsteinA\"", 
+        GrayLevel[0.3]], 
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\"6.91\"", "\[Times]", 
+           SuperscriptBox["10", "\"-7\""]}], 6.91*^-7, AutoDelete -> True], 
+        NumberForm[#, 4]& ]}, {
+       StyleBox["\"Frequency\"", 
+        GrayLevel[0.3]], 
+       TemplateBox[{"230.5379938`", "\"GHz\"", "gigahertz", "\"Gigahertz\""}, 
+        "Quantity", SyntaxForm -> Mod]}, {
+       StyleBox["\"FrequencyUnit\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"GHz\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"EnergyUpper\"", 
+        GrayLevel[0.3]], 
+       TemplateBox[{"16.6`", "\"K\"", "kelvins", "\"Kelvins\""}, "Quantity", 
+        SyntaxForm -> Mod]}, {
+       StyleBox["\"EnergyUnit\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"Kelvin\"", FontColor -> GrayLevel[0.4]]}, {
+       ItemBox[
+        RowBox[{"1 level", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"7", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[<|\"UpperLevel\" -> _, \"LowerLevel\" -> _, \"EinsteinA\" -> _, \
+\"Frequency\" -> _, \"FrequencyUnit\" -> _, \"EnergyUpper\" -> _, \
+\"EnergyUnit\" -> _|>]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ ImageSize->{209, 193},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]=",
+ CellID->7720849]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lamdaData", "[", 
+   RowBox[{"\"\<13C16O\>\"", ",", "\"\<Transitions\>\"", ",", "2"}], "]"}], 
+  "[", "\"\<Frequency\>\"", "]"}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->321967294],
+
+Cell[BoxData[
+ TemplateBox[{"220.3986841281`","\"GHz\"","gigahertz","\"Gigahertz\""},
+  "Quantity"]], "Output",
+ ImageSize->{85, 23},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]=",
+ CellID->64181943]
+}, Open  ]],
+
+Cell["Extract a list of transition frequencies:", "ExampleText",
+ CellID->24189944],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"frequencyList", "[", "spec_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Normal", "[", 
+    RowBox[{"(", 
+     RowBox[{"QuantityMagnitude", "/@", 
+      RowBox[{"Normal", "[", 
+       RowBox[{"lamdaData", "[", 
+        RowBox[{
+        "spec", ",", "\"\<Transitions\>\"", ",", "All", ",", 
+         "\"\<Frequency\>\""}], "]"}], "]"}]}], ")"}], "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "2"}], "]"}], "]"}]}]], "Input",
+ CellLabel->"In[10]:=",
+ CellID->255697325],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"frequencyList", "[", "\"\<CO\>\"", "]"}]], "Input",
+ CellLabel->"In[11]:=",
+ CellID->78808881],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "115.2711912`", ",", "230.5379938`", ",", "345.7959762`", ",", 
+   "461.0406784`", ",", "576.2679118`", ",", "691.4731878`", ",", 
+   "806.6514744`", ",", "921.7993408`", ",", "1036.9128986`", ",", 
+   "1151.985515`", ",", "1267.0137589`", ",", "1381.9953433`", ",", 
+   "1496.9220341`", ",", "1611.7942887`", ",", "1726.6025007`", ",", 
+   "1841.3448403`", ",", "1956.017648`", ",", "2070.6172641`", ",", 
+   "2185.1327101`", ",", "2299.5694751`", ",", "2413.9165806`", ",", 
+   "2528.1740264`", ",", "2642.3308339`", ",", "2756.3851733`", ",", 
+   "2870.3407041`", ",", "2984.1791285`", ",", "3097.9077656`", ",", 
+   "3211.5192963`", ",", "3325.0064015`", ",", "3438.3654214`", ",", 
+   "3551.5926967`", ",", "3664.6845676`", ",", "3777.6300555`", ",", 
+   "3890.4511179`", ",", "4003.1001801`", ",", "4115.6028594`", ",", 
+   "4227.9591556`", ",", "4340.132473`", ",", "4452.1594074`", ",", 
+   "4564.003363`", ",", "4675.6862972`", ",", "4787.1642953`", ",", 
+   "4898.4885911`", ",", "5009.6152698`", ",", "5120.5370123`", ",", 
+   "5231.2830952`", ",", "5341.8096035`", ",", "5452.1384947`", ",", 
+   "5562.2624497`", ",", "5672.1668301`", ",", "5781.851636`", ",", 
+   "5891.3461439`", ",", "6000.5478858`", ",", "6109.573968`", ",", 
+   "6218.3658374`", ",", "6326.8942173`", ",", "6435.173746`", ",", 
+   "6543.2483386`", ",", "6651.030165`", ",", "6758.5777786`", ",", 
+   "6865.8619028`", ",", "6972.8825375`", ",", "7079.5957678`", ",", 
+   "7186.1187002`", ",", "7292.2903133`", ",", "7398.2130752`", ",", 
+   "7503.8577094`", ",", "7609.2242158`", ",", "7714.239403`", ",", 
+   "7819.0203773`", ",", "7923.4793089`", ",", "8027.6161979`", ",", 
+   "8131.4310442`", ",", "8234.982401`", ",", "8338.1824386`", ",", 
+   "8441.08971`", ",", "8543.6456623`", ",", "8645.8795718`", ",", 
+   "8747.8207153`", ",", "8849.3227097`"}], "}"}]], "Output",
+ ImageSize->{548, 143},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[11]=",
+ CellID->4606947]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionLowerLevel"]],"paclet:LTE/ref/transitionLowerLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperLevel"]],"paclet:LTE/ref/transitionUpperLevel"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionUpperEnergy"]],
+    "paclet:LTE/ref/transitionUpperEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionFrequency"]],"paclet:LTE/ref/transitionFrequency"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["transitionEinsteinA"]],"paclet:LTE/ref/transitionEinsteinA"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["frequencyList"]],"paclet:LTE/ref/frequencyList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["einsteinAList"]],"paclet:LTE/ref/einsteinAList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["levelEnergy"]],"paclet:LTE/ref/levelEnergy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["energyList"]],"paclet:LTE/ref/energyList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["statisticalWeight"]],"paclet:LTE/ref/statisticalWeight"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["weightList"]],"paclet:LTE/ref/weightList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Radiative Transfer Package"]],
+   "paclet:LTE/tutorial/LTE - Radiative Transfer Package"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE - Advanced Radiative Transfer Modelling"]],
+   "paclet:LTE/tutorial/LTE - Advanced Radiative Transfer Modelling"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->62236461],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->1584193535],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["LTE Radiative transfer guide"]],
+   "paclet:LTE/guide/LTE - Radiative Transfer"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->1038487239],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Leiden Atomic and Molecular Database"]],
+   "http://home.strw.leidenuniv.nl/~moldata/"},
+  "WebLink",
+  BaseStyle->{"RelatedLinks"}]]]], "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"lamdaData",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2017, 3, 9, 12, 50, 9.7555936}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "KOSMA`", 
+    "keywords" -> {
+     "LTE", "radiative transfer", "LAMDA", "energy level", "transition", 
+      "atomic", "molecular"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "K O S M A Symbol", "language" -> "en", "paclet" -> "KOSMA", "status" -> 
+    "None", "summary" -> 
+    "lamdaData[] is a Dataset composed of the information available at the \
+LAMDA Leiden database.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "lamdaData", "titlemodifier" -> "", "windowtitle" -> "lamdaData", "type" -> 
+    "Symbol", "uri" -> "KOSMA/ref/lambdaData"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[11298, 302, 387, 15, 30, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->270660069]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 140823, 3738}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 4771, 112, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5355, 135, 286, 11, 44, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[5666, 150, 412, 12, 80, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[6103, 166, 737, 24, 31, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->82189101],
+Cell[6843, 192, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6877, 194, 528, 9, 70, "Notes",
+ CellID->1067943069],
+Cell[7408, 205, 397, 7, 70, "Notes",
+ CellID->286157641],
+Cell[7808, 214, 71, 1, 70, "Notes",
+ CellID->608171575],
+Cell[7882, 217, 978, 18, 70, "2ColumnTableMod",
+ CellID->241706258],
+Cell[8863, 237, 86, 1, 70, "Notes",
+ CellID->542093978],
+Cell[8952, 240, 927, 23, 70, "2ColumnTableMod",
+ CellID->281532028],
+Cell[9882, 265, 90, 1, 70, "Notes",
+ CellID->45827942],
+Cell[9975, 268, 1145, 23, 70, "2ColumnTableMod",
+ CellID->674407492],
+Cell[11123, 293, 92, 1, 70, "Notes",
+ CellID->43373842],
+Cell[11218, 296, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11298, 302, 387, 15, 30, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->270660069],
+Cell[CellGroupData[{
+Cell[11710, 321, 193, 6, 25, "ExampleSection",
+ CellID->1858605],
+Cell[11906, 329, 112, 3, 26, "Input",
+ CellID->430657907],
+Cell[CellGroupData[{
+Cell[12043, 336, 78, 2, 26, "Input",
+ CellID->383819211],
+Cell[12124, 340, 83213, 2135, 577, "Output",
+ CellID->673208203]
+}, Open  ]],
+Cell[95352, 2478, 97, 1, 70, "ExampleText",
+ CellID->452475439],
+Cell[CellGroupData[{
+Cell[95474, 2483, 108, 3, 70, "Input",
+ CellID->149644117],
+Cell[95585, 2488, 2740, 57, 64, "Output",
+ CellID->97426288]
+}, Open  ]],
+Cell[98340, 2548, 91, 1, 70, "ExampleText",
+ CellID->410780979],
+Cell[CellGroupData[{
+Cell[98456, 2553, 113, 3, 70, "Input",
+ CellID->44417942],
+Cell[98572, 2558, 7559, 190, 70, "Output",
+ CellID->288386262]
+}, Open  ]],
+Cell[106146, 2751, 91, 1, 70, "ExampleText",
+ CellID->6175921],
+Cell[CellGroupData[{
+Cell[106262, 2756, 149, 4, 70, "Input",
+ CellID->140446240],
+Cell[106414, 2762, 14825, 414, 70, "Output",
+ CellID->72550588]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[121276, 3181, 190, 6, 70, "Input",
+ CellID->737967140],
+Cell[121469, 3189, 2579, 61, 70, "Output",
+ CellID->24635853]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[124085, 3255, 279, 9, 70, "Input",
+ CellID->67079024],
+Cell[124367, 3266, 2480, 60, 111, "Output",
+ CellID->87691396]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126884, 3331, 168, 5, 70, "Input",
+ CellID->426215437],
+Cell[127055, 3338, 3105, 73, 70, "Output",
+ CellID->7720849]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130197, 3416, 217, 6, 70, "Input",
+ CellID->321967294],
+Cell[130417, 3424, 240, 7, 70, "Output",
+ CellID->64181943]
+}, Open  ]],
+Cell[130672, 3434, 83, 1, 70, "ExampleText",
+ CellID->24189944],
+Cell[130758, 3437, 504, 15, 70, "Input",
+ CellID->255697325],
+Cell[CellGroupData[{
+Cell[131287, 3456, 118, 3, 70, "Input",
+ CellID->78808881],
+Cell[131408, 3461, 2031, 34, 164, "Output",
+ CellID->4606947]
+}, Open  ]]
+}, Open  ]],
+Cell[133466, 3499, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[133534, 3504, 270, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[133807, 3518, 3427, 98, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[137271, 3621, 272, 12, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[137546, 3635, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[137580, 3637, 218, 6, 70, "Tutorials",
+ CellID->341631938],
+Cell[137801, 3645, 239, 6, 70, "Tutorials",
+ CellID->62236461],
+Cell[138043, 3653, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[138111, 3658, 280, 12, 70, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[138394, 3672, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[138428, 3674, 210, 6, 70, "RelatedLinks",
+ CellID->1038487239],
+Cell[138641, 3682, 233, 6, 70, "RelatedLinks",
+ CellID->76949004]
+}, Open  ]],
+Cell[138889, 3691, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
